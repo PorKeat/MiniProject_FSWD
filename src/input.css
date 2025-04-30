@@ -1,1 +1,6 @@
 @import "tailwindcss";
+@theme{
+    --color-primary: #2A9D8F;
+    --font-logo: "Cal Sans", sans-serif;
+    --font-roboto: "Roboto", sans-serif;
+}
