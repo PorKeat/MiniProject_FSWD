@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/output.css" />
+  </head>
+  <body class="m-0">
+    <header class="relative top-0 left-0 right-0 z-10">
+      <nav
+        class="flex justify-end p-6 w-[75%] mx-auto bg-[rgba(36,36,36,0.1)] backdrop-blur-[32px] text-amber-50 fixed mt-10 left-0 right-0 z-100 rounded-full transition-all duration-300 ease-in-out"
+      >
+        <ul class="flex gap-7 mr-10">
+          <li class="hover:text-blue-400 hover:ease-in-out hover:transform"><a href="Home">Home</a></li>
+          <li class="hover:text-blue-400 hover:ease-in-out hover:transform"><a href="">Services</a></li>
+          <li class="hover:text-blue-400 hover:ease-in-out hover:transform"><a href="">About Us</a></li>
+          <li class="hover:text-blue-400 hover:ease-in-out hover:transform"><a href="">Contact</a></li>
+          <li class="hover:text-blue-400 hover:ease-in-out hover:transform"><a href="">Blog</a></li>
+          
+        </ul>
+      </nav>
+      <section class="absolute -top-10 left-0 right-0 bottom-0 -z-10">
+        <img
+          src="../Image/allphoto-bangkok-o4ispOaaO48-unsplash.jpg"
+          class="object-cover w-[100%] h-[870px]"
+          alt=""
+        />
+      </section>
+      <div class=" absolute items-center bg-[rgba(84,84,84,0.61)] text-left top-56 left-[200px]
+        w-[35%] h-[300px] rounded-2xl p-10">
+        <h1 class="text-5xl text-left text-amber-50 font-bold mt-10">
+          Welcome to Our Website
+        </h1>
+        <p class="text-left text-amber-50 mt-4">
+          Your one-stop solution for all your needs.
+        </p>
+        <button
+          class="bg-amber-500 mt-2 text-white py-2 px-4 rounded-full hover:bg-amber-600 transition duration-300"
+        >
+          Get Started
+        </button>
+      </div>
+      <div>
+        <img src="" alt="">
+      </div>
+    </header>
+    <div class="bg-amber-600 h-9 mt-[5000px]">
+      <h1>Helllo</h1>
+    </div>
+
+    <script>
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector("nav");
+        const scrollPosition = window.scrollY;
+        if (scrollPosition > 100) {
+          navbar.classList.remove("w-[80%]","rounded-full","top-10");
+          navbar.classList.add("w-[100%]","top-0");
+
+        } else {
+          navbar.classList.remove("w-[100%]","top-0");
+          navbar.classList.add("w-[80%]","rounded-full","top-10");
+        }
+      });
+    </script>
+  </body>
+</html>
