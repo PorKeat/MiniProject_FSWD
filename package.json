@@ -5,12 +5,7 @@
     "tailwindcss": "^4.1.4"
   },
   "scripts": {
-<<<<<<< HEAD
     "start": "tailwindcss -i ./src/input.css -o ./src/output.css --watch",
     "push-dev": "git add . && git commit -m \"dev\" && git push origin dev"
-=======
-    "start": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "push-dev": "git pull origin dev && git add . && git commit -m \"dev\" && git push origin dev"
->>>>>>> fa3c180e21bb67a56b4fa9c34ac7121e86b6f670
   }
 }
