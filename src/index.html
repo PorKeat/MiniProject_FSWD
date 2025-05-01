@@ -14,34 +14,81 @@
     />
     <title>Document</title>
   </head>
-  <body>
-    <header class="relative top-0 left-0 right-0 z-1000">
+  <body class="overflow-x-hidden">
+    <header>
       <nav id="navbar"></nav>
-      <section class="absolute -top-5 left-0 right-0 bottom-0 -z-10">
+      <section class="relative top-0 left-0 right-0 bottom-0 -z-10">
+        <div class="absolute inset-0 bg-black opacity-90"></div>
         <img
           src="../assets/image/allphoto-bangkok-o4ispOaaO48-unsplash.jpg"
-          class="object-cover w-[100%] h-[870px]"
-          alt=""
+          class="object-cover w-full h-[870px] opacity-60"
+          alt="Scenic view of Bangkok"
         />
       </section>
-      <div
-        class="absolute items-center bg-[rgba(84,84,84,0.1)] text-left top-56 left-[200px] w-[35%] h-[300px] rounded-2xl p-10"
+
+      <article
+        id="heroSection"
+        class="absolute top-[25rem] left-[50%] transform -translate-x-[50%] -translate-y-[50%] text-center w-[40%] sm:w-[60%] lg:w-[40%] p-8 rounded-2xl shadow-lg"
       >
-        <h1 class="text-5xl text-left text-amber-50 font-bold mt-10">
-          Welcome to Our Website
-        </h1>
-        <p class="text-left text-amber-50 mt-4">
-          Your one-stop solution for all your needs.
-        </p>
+        <div>
+          <p
+            class="text-amber-50 mt-4 text-lg sm:text-xl"
+            id="heroText"
+            style="opacity: 0"
+          >
+            Your one-stop solution for all your needs.
+          </p>
+          <h1
+            class="inline-block text-4xl sm:text-5xl text-amber-50 font-extrabold leading-tight uppercase tracking-wider"
+            id="heroTitle"
+          >
+            Welcome to Our Website
+          </h1>
+        </div>
+
         <button
-          class="bg-amber-500 mt-2 text-white py-2 px-4 rounded-full hover:bg-amber-600 transition duration-300"
+          class="bg-amber-500 mt-6 hover:bg-amber-600 text-white py-3 px-6 rounded-full shadow-md transition duration-300 transform hover:scale-105"
+          id="heroButton"
+          style="opacity: 0; transform: translateY(-50px)"
         >
           Get Started
         </button>
-      </div>
+      </article>
     </header>
     <main class="h-[200vh]"></main>
     <h1 class="text-red-500">Hello World</h1>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script>
+      window.addEventListener("load", function () {
+        anime
+          .timeline({ loop: false })
+          .add({
+            targets: "#heroTitle",
+            scale: [14, 1],
+            opacity: [0, 1],
+            easing: "easeOutCirc",
+            duration: 1200,
+            delay: 0,
+          })
+          .add({
+            targets: "#heroButton",
+            opacity: [0, 1],
+            translateY: [-50, 0],
+            easing: "easeOutCirc",
+            duration: 350,
+          })
+          .add({
+            targets: "#heroText",
+            opacity: [0, 1],
+            translateY: [50, 0],
+            easing: "easeOutCirc",
+            duration: 350,
+            delay: 100,
+          });
+      });
+    </script>
+
+    <script type="module" src="./js/script.js"></script>
   </body>
-  <script type="module" src="./js/script.js"></script>
 </html>

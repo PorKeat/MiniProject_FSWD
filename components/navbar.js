@@ -1,7 +1,7 @@
 const Navbar = () => {
   return `<section
         id="nav"
-        class="flex items-center justify-between py-4 px-6 w-[75%] mx-auto bg-[rgba(36,36,36,0.1)] backdrop-blur-[32px] text-amber-50 fixed left-0 right-0 z-[100] rounded-full transition-all duration-300 top-5 ease-in-out"
+        class="flex items-center justify-between py-4 px-6 w-[75%] mx-auto  text-amber-50 fixed left-0 right-0 z-[100] rounded-full transition-all duration-300 top-5 ease-in-out"
       >
         <div class="flex items-center gap-2">
           <img
@@ -109,9 +109,19 @@ const NavbarScript = () => {
       const scrollPosition = window.scrollY;
       if (scrollPosition > 100) {
         navbar.classList.remove("w-[75%]", "rounded-full", "top-5");
-        navbar.classList.add("w-[100%]", "top-0");
+        navbar.classList.add(
+          "w-[100%]",
+          "top-0",
+          "bg-[rgba(36,36,36,0.1)]",
+          "backdrop-blur-[32px]"
+        );
       } else {
-        navbar.classList.remove("w-[100%]", "top-0");
+        navbar.classList.remove(
+          "w-[100%]",
+          "top-0",
+          "bg-[rgba(36,36,36,0.1)]",
+          "backdrop-blur-[32px]"
+        );
         navbar.classList.add("w-[75%]", "rounded-full", "top-5");
       }
     });
