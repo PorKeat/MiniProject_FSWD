@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.4",
+    "motion": "^12.9.2",
+    "tailwindcss": "^4.1.4"
+  },
+  "scripts": {
+    "start": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "push-dev": "git pull origin dev && git add . && git commit -m \"dev\" && git push origin dev"
+  }
+}
