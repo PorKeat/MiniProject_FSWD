@@ -9,10 +9,10 @@ const Navbar = () => {
   };
 
   const getPageHref = (path) => {
-    if (currentPath.includes("index")) {
-      return `/src/pages/${path}`;
+    if (path === "index.html") {
+      return `/src/index.html`;
     }
-    return `/src/${path}`;
+    return `/src/pages/${path}`;
   };
 
   return `
