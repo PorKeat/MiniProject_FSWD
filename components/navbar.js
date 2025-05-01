@@ -74,13 +74,14 @@ const Navbar = () => {
           </ul>
           <div class="flex gap-4">
             <button class="cursor-pointer">
+
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
             <button
-              class="bg-[#2A9D8F] hover:bg-[#21867A] py-2 px-4 rounded-full transition duration-300"
+            class="bg-[#2A9D8F] hover:bg-[#21867A] py-2 px-4 rounded-full transition duration-300"
             >
-              Log In
-            </button>
+            <a href="${getPageHref("login.html")}">Log In</a>
+          </button>
           </div>
         </section>
         <!-- search -->
