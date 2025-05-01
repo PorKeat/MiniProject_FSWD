@@ -88,30 +88,34 @@ const Navbar = () => {
       </div>`;
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("navbar").innerHTML = Navbar();
+const NavbarScript = () => {
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("navbar").innerHTML = Navbar();
 
-  const searchBtn = document.querySelector(".fa-magnifying-glass");
-  const modal = document.getElementById("searchModal");
-  const closeBtn = document.getElementById("closeModal");
-  const navbar = document.getElementById("nav");
+    const searchBtn = document.querySelector(".fa-magnifying-glass");
+    const modal = document.getElementById("searchModal");
+    const closeBtn = document.getElementById("closeModal");
+    const navbar = document.getElementById("nav");
 
-  searchBtn.addEventListener("click", () => {
-    modal.classList.remove("hidden");
+    searchBtn.addEventListener("click", () => {
+      modal.classList.remove("hidden");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      modal.classList.add("hidden");
+    });
+
+    window.addEventListener("scroll", function () {
+      const scrollPosition = window.scrollY;
+      if (scrollPosition > 100) {
+        navbar.classList.remove("w-[75%]", "rounded-full", "top-5");
+        navbar.classList.add("w-[100%]", "top-0");
+      } else {
+        navbar.classList.remove("w-[100%]", "top-0");
+        navbar.classList.add("w-[75%]", "rounded-full", "top-5");
+      }
+    });
   });
+};
 
-  closeBtn.addEventListener("click", () => {
-    modal.classList.add("hidden");
-  });
-
-  window.addEventListener("scroll", function () {
-    const scrollPosition = window.scrollY;
-    if (scrollPosition > 100) {
-      navbar.classList.remove("w-[75%]", "rounded-full", "top-5");
-      navbar.classList.add("w-[100%]", "top-0");
-    } else {
-      navbar.classList.remove("w-[100%]", "top-0");
-      navbar.classList.add("w-[75%]", "rounded-full", "top-5");
-    }
-  });
-});
+export default NavbarScript;
