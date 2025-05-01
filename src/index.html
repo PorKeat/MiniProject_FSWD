@@ -18,23 +18,46 @@
     <header>
       <nav id="navbar"></nav>
       <section class="relative top-0 left-0 right-0 bottom-0 -z-10">
-        <div class="absolute inset-0 bg-black opacity-90"></div>
-        <img
-          src="../assets/image/allphoto-bangkok-o4ispOaaO48-unsplash.jpg"
-          class="object-cover w-full h-[870px] opacity-60"
-          alt="Scenic view of Bangkok"
-        />
+        <div id="heroImages">
+          <img
+            src="../assets/image/allphoto-bangkok-o4ispOaaO48-unsplash.jpg"
+            class="absolute top-0 left-0 object-cover w-full h-[870px] scale-100 transition-opacity duration-1000 ease-in-out opacity-100 brightness-50"
+            alt="khmer temple"
+          />
+          <img
+            src="../assets/image/tin-ly-ok29ddIXY58-unsplash.jpg"
+            class="absolute top-0 left-0 object-cover w-full h-[870px] scale-100 transition-opacity duration-1000 ease-in-out opacity-0 brightness-50"
+            alt="khmer temple in the jungle"
+          />
+          <img
+            src="../assets/image/james-wheeler-9zXMb-E8pI0-unsplash.jpg"
+            class="absolute top-0 left-0 object-cover w-full h-[870px] scale-100 transition-opacity duration-1000 ease-in-out opacity-0 brightness-50"
+            alt="beach view"
+          />
+        </div>
       </section>
+
+      <button
+        class="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 flex items-center justify-center border-2 border-white text-white rounded-full shadow-lg bg-transparent hover:bg-[#21867A] hover:border-transparent transition-all duration-300 ease-in-out hover:scale-110 focus:outline-none cursor-pointer"
+        id="prevArrow"
+      >
+        <i class="fas fa-arrow-left"></i>
+      </button>
+      <button
+        class="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 flex items-center justify-center border-2 border-white text-white rounded-full shadow-lg bg-transparent hover:bg-[#21867A] hover:border-transparent transition-all duration-300 ease-in-out hover:scale-110 focus:outline-none cursor-pointer"
+        id="nextArrow"
+      >
+        <i class="fas fa-arrow-right"></i>
+      </button>
 
       <article
         id="heroSection"
-        class="absolute top-[25rem] left-[50%] transform -translate-x-[50%] -translate-y-[50%] text-center w-[40%] sm:w-[60%] lg:w-[40%] p-8 rounded-2xl shadow-lg"
+        class="absolute top-[25rem] left-[50%] transform -translate-x-[50%] -translate-y-[50%] text-center w-[40%] sm:w-[60%] lg:w-[40%] p-8 rounded-2xl"
       >
         <div>
           <p
-            class="text-amber-50 mt-4 text-lg sm:text-xl"
+            class="text-amber-50 mt-4 text-lg sm:text-xl opacity-0"
             id="heroText"
-            style="opacity: 0"
           >
             Your one-stop solution for all your needs.
           </p>
@@ -47,9 +70,8 @@
         </div>
 
         <button
-          class="bg-amber-500 mt-6 hover:bg-amber-600 text-white py-3 px-6 rounded-full shadow-md transition duration-300 transform hover:scale-105"
+          class="bg-[#2A9D8F] mt-6 hover:bg-[#21867A] text-white py-3 px-6 rounded-full shadow-md transition duration-300 transform hover:scale-105 opacity-0 -translate-y-[25%]"
           id="heroButton"
-          style="opacity: 0; transform: translateY(-50px)"
         >
           Get Started
         </button>
@@ -61,6 +83,32 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script>
       window.addEventListener("load", function () {
+        let currentIndex = 0;
+        const images = document.querySelectorAll("#heroImages img");
+        const prevArrow = document.getElementById("prevArrow");
+        const nextArrow = document.getElementById("nextArrow");
+        function updateImage(newIndex) {
+          images[currentIndex].classList.remove("opacity-100");
+          images[currentIndex].classList.add("opacity-0");
+          currentIndex = newIndex;
+          images[currentIndex].classList.remove("opacity-0");
+          images[currentIndex].classList.add("opacity-100");
+        }
+
+
+        function showNextImage() {
+          const newIndex = (currentIndex + 1) % images.length;
+          updateImage(newIndex);
+        }
+
+        function showPrevImage() {
+          const newIndex = (currentIndex - 1 + images.length) % images.length;
+          updateImage(newIndex);
+        }
+
+        nextArrow.addEventListener("click", showNextImage);
+        prevArrow.addEventListener("click", showPrevImage);
+
         anime
           .timeline({ loop: false })
           .add({
