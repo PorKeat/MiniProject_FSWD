@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Frequently Asked Questions</title>
+</head>
+<body>
+  <nav id="navbar"></nav>
+  <main class="max-w-7xl mx-auto py-8">
+    <section class="h-auto place-content-center lg:h-screen">
+      <article class="sm:text-4xl text-3xl font-bold text-center text-teal-600 mb-8">Frequently Asked Questions</article>
+      <div class="grid grid-cols-12">
+        <div class="col-span-12 sm:col-span-8 lg:col-span-6 space-y-4 px-3 lg:order-1 order-2" id="faq-list">
+          <div class="border-b-2 border-amber-500 border-l-4 rounded-md faq-item">
+            <button class="w-full py-4 px-2 flex justify-between items-center text-left md:text-xl text-lg font-semibold focus:outline-none toggle-faq">
+              <span>What services do you offer?</span>
+              <i class="fa-solid fa-arrow-down sm:text-xl text-lg transition-transform"></i>
+            </button>
+            <div class="pb-2 px-2 text-gray-600 hidden faq-answer">
+              We offer guided tours, customizable travel packages, hotel reservations, and transportation options in major tourist destinations.
+            </div>
+          </div>
+          <div class="border-b-2 border-amber-500 border-l-4 rounded-md faq-item">
+            <button class="w-full py-4 px-2 flex justify-between items-center text-left md:text-xl text-lg font-semibold focus:outline-none toggle-faq">
+              <span>How do I book a tour?</span>
+              <i class="fa-solid fa-arrow-down  sm:text-xl text-lg transition-transform"></i>
+            </button>
+            <div class="pb-2 px-2 text-gray-600 hidden faq-answer">
+              Simply browse our destinations, choose your tour, pick a date, and proceed to checkout.
+            </div>
+          </div>
+          <div class="border-b-2 border-amber-500 border-l-4 rounded-md faq-item">
+            <button class="w-full py-4 px-2 flex justify-between items-center text-left md:text-xl text-lg font-semibold focus:outline-none toggle-faq">
+              <span>What is your cancellation policy?</span>
+              <i class="fa-solid fa-arrow-down  sm:text-xl text-lg transition-transform"></i>
+            </button>
+            <div class="pb-2 px-2 text-gray-600 hidden faq-answer">
+              You can cancel for a full refund up to 48 hours before the start of the tour. After that, partial refunds may apply.
+            </div>
+          </div>
+          <div class="border-b-2 border-amber-500 border-l-4 rounded-md faq-item">
+            <button class="w-full py-4 px-2 flex justify-between items-center text-left md:text-xl text-lg font-semibold focus:outline-none toggle-faq">
+              <span>Do I need travel insurance?</span>
+              <i class="fa-solid fa-arrow-down  sm:text-xl text-lg transition-transform"></i>
+            </button>
+            <div class="pb-2 px-2 text-gray-600 hidden faq-answer">
+              Travel insurance is not required but highly recommended to protect against unexpected delays or emergencies.
+            </div>
+          </div>
+          <div class="border-b-2 border-amber-500 border-l-4 rounded-md faq-item">
+            <button class="w-full flex justify-between py-4 px-2 items-center text-left md:text-xl text-lg font-semibold focus:outline-none toggle-faq">
+              <span>What if I need help during the trip?</span>
+              <i class="fa-solid fa-arrow-down sm:text-xl text-lg transition-transform"></i>
+            </button>
+            <div class="pb-2 px-2 text-gray-600 hidden faq-answer">
+              Our support team is available 24/7. You’ll also receive emergency contact numbers before your departure.
+            </div>
+          </div>
+        </div>
+        <div class="col-span-12 sm:col-span-8 lg:col-span-6 lg:order-2 order-1 flex items-center justify-center">
+          <img src="../../image/FAQ-image.png" alt="Frequently Asked Questions" class="w-full">
+        </div>
+      </div>
+    </section>
+    <section class="grid grid-cols-12 gap-6 mt-8 sm:mt-0 lg:h-screen py-8 lg:py-0 place-content-center">
+      <div class="col-span-12 sm:col-span-7 lg:col-span-6 px-4">
+        <img src="../../image/ask-faq.avif" alt="Contact us image" class="w-full h-auto object-cover">
+      </div>
+      <div class="col-span-12 sm:col-span-7 lg:col-span-5 px-3 flex flex-col justify-center">
+        <article class="sm:text-3xl text-2xl mb-4">If you have any concerns, please kindly let us know.</article>
+        <form action="input" class="bg-gray-200 shadow-2xl rounded-xl sm:p-6 p-2 space-y-4">
+          <div>
+            <label for="name" class="block sm:text-xl font-medium text-gray-700">Name</label>
+            <input type="text" id="name" placeholder="Enter your name" class="mt-1 py-3 px-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-xl" required>
+          </div>
+          <div>
+            <label for="email" class="block sm:text-xl font-medium text-gray-700">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" class="mt-1 py-3 px-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-xl">
+          </div>
+          <div>
+            <label for="question" class="block sm:text-xl font-medium text-gray-700">Question</label>
+            <textarea id="question" name="question" rows="4" placeholder="Your question" class="mt-1 py-3 px-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-xl"></textarea>
+          </div>
+          <div>
+            <button type="submit" class="w-full rounded-md bg-indigo-600 py-3 px-4 font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:text-xl">Submit</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <script>
+    const toggleButtons = document.querySelectorAll('.toggle-faq');
+
+    toggleButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const currentItem = button.closest('.faq-item');
+        const currentAnswer = currentItem.querySelector('.faq-answer');
+        const currentIcon = button.querySelector('i');
+
+        document.querySelectorAll('.faq-item').forEach((item) => {
+          const answer = item.querySelector('.faq-answer');
+          const icon = item.querySelector('i');
+
+          if (item !== currentItem) {
+            answer.classList.add('hidden');
+            icon.classList.remove('rotate-180');
+          }
+        });
+        currentAnswer.classList.toggle('hidden');
+        currentIcon.classList.toggle('rotate-180');
+      });
+    });
+  </script>
+</body>
+<script type="module" src="./js/script.js"></script>
+</html>
