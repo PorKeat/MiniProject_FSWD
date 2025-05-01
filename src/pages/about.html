@@ -45,9 +45,29 @@
           transform: translateY(0px);
         }
       }
+      svg#freepik_stories-directions:not(.animated) .animable {
+        opacity: 0;
+      }
+      svg#freepik_stories-directions.animated #freepik--Device--inject-245 {
+        animation: 1.5s Infinite linear floating;
+        animation-delay: 0s;
+      }
+      @keyframes floating {
+        0% {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+      }
     </style>
   </head>
-  <body>
+  <body class="overflow-x-hidden">
     <header>
       <nav id="navbar"></nav>
     </header>
@@ -55,7 +75,7 @@
       <section>
         <!-- Hero Section with Parallax -->
         <section
-          class="parallax text-white py-32 relative w-full h-[870px]"
+          class="parallax text-white py-32 relative w-full h-[870px] font-['Roboto']"
           style="
             position: relative;
             background-image: linear-gradient(
@@ -99,13 +119,19 @@
       <!-- Who We Are -->
       <section id="story" class="py-20 px-6 text-center bg-gray-50">
         <h2 class="text-4xl font-bold text-[#2A9D8F] mb-6">Who We Are</h2>
-        <p class="text-lg max-w-3xl mx-auto text-gray-600">
+        <p
+          class="text-base sm:text-lg md:text-xl mx-auto text-gray-600"
+        >
           We are a local team of travel lovers, historians, photographers, and
           cultural ambassadors, united by one mission: to share Cambodia’s
           breathtaking beauty and spirit with the world.
         </p>
       </section>
-      <section class="">
+      <section
+        class="font-['Roboto']"
+        data-aos="fade-left"
+        data-aos-duration="1000"
+      >
         <div
           class="grid max-w-screen-xl px-4 pt-20 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 lg:pt-28"
         >
@@ -117,7 +143,7 @@
             </h1>
 
             <p
-              class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400"
+              class="text-base sm:text-lg md:text-xl max-w-3xl mb-6 text-gray-600 lg:mb-8 dark:text-gray-600"
             >
               Cambodia Travel was founded in 2015 with a passion for showcasing
               Cambodia’s rich heritage and natural beauty. From the
@@ -3174,6 +3200,8 @@
       <!-- Our Vision / Image -->
       <section
         class="grid max-w-screen-xl px-4 pt-20 pb-8 mx-auto py-20 bg-white"
+        data-aos="fade-right"
+        data-aos-duration="1000"
       >
         <div
           class="container mx-auto px-6 flex flex-col md:flex-row items-center"
@@ -3188,29 +3216,6 @@
               xmlns:xlink="http://www.w3.org/1999/xlink"
               xmlns:svgjs="http://svgjs.com/svgjs"
             >
-              <style>
-                svg#freepik_stories-directions:not(.animated) .animable {
-                  opacity: 0;
-                }
-                svg#freepik_stories-directions.animated
-                  #freepik--Device--inject-245 {
-                  animation: 1.5s Infinite linear floating;
-                  animation-delay: 0s;
-                }
-                @keyframes floating {
-                  0% {
-                    opacity: 1;
-                    transform: translateY(0px);
-                  }
-                  50% {
-                    transform: translateY(-10px);
-                  }
-                  100% {
-                    opacity: 1;
-                    transform: translateY(0px);
-                  }
-                }
-              </style>
               <g
                 id="freepik--background-complete--inject-245"
                 class="animable"
@@ -5059,11 +5064,11 @@
               </defs>
             </svg>
           </div>
-          <div class="md:w-1/2 md:pl-12">
-            <h3 class="text-4xl font-bold text-[#2A9D8F] mb-4">
-              Our Vision
-            </h3>
-            <p class="text-gray-700 text-lg mb-4">
+          <div class="md:w-1/2 md:pl-12 font-['Roboto']">
+            <h3 class="text-4xl font-bold text-[#2A9D8F] mb-4">Our Vision</h3>
+            <p
+              class="text-gray-700 text-base sm:text-lg md:text-xl max-w-3xl mb-4"
+            >
               We believe in sustainable tourism that benefits local communities,
               respects cultural heritage, and protects our natural treasures.
             </p>
@@ -5077,8 +5082,10 @@
       </section>
       <section
         id="features"
-        class="relative px-6 py-16 md:py-24 md:px-10"
+        class="relative px-6 py-16 md:py-24 md:px-10 font-['Roboto']"
         style="background-color: #f4f6ef"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
       >
         <!-- Section Header -->
         <div class="mx-auto max-w-5xl text-center">
@@ -5091,7 +5098,7 @@
             Build a Website That Your Customers Love
           </h2>
           <p
-            class="mt-4 mx-auto max-w-xl text-gray-600 text-base font-medium leading-relaxed"
+            class="text-base sm:text-lg md:text-xl mt-4 mx-auto text-gray-600 font-medium leading-relaxed"
           >
             Our templates allow for maximum customization. No technical skills
             required – our intuitive tools make it easy.
@@ -5100,7 +5107,7 @@
 
         <!-- Feature Cards -->
         <div
-          class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto z-10 relative"
+          class="font-['Roboto'] mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto z-10 relative"
         >
           <!-- Feature 1 -->
           <div
@@ -5122,10 +5129,12 @@
                 <circle cx="17" cy="17" r="1" />
               </svg>
             </div>
-            <h3 class="mt-6 text-lg font-semibold text-gray-800">
+            <h3 class="mt-6 text-2xl font-semibold text-gray-800">
               Customizable
             </h3>
-            <p class="mt-2 text-gray-600 leading-relaxed">
+            <p
+              class="text-base sm:text-lg md:text-xl max-w-3xl mt-2 text-gray-600 leading-relaxed"
+            >
               Easily tailor your site's colors, fonts, and layout to match your
               brand perfectly.
             </p>
@@ -5148,10 +5157,12 @@
                 <polyline points="13 3 13 10 19 10 11 21 11 14 5 14 13 3" />
               </svg>
             </div>
-            <h3 class="mt-6 text-lg font-semibold text-gray-800">
+            <h3 class="mt-6 text-2xl font-semibold text-gray-800">
               Fast Performance
             </h3>
-            <p class="mt-2 text-gray-600 leading-relaxed">
+            <p
+              class="text-base sm:text-lg md:text-xl max-w-3xl mt-2 text-gray-600 leading-relaxed"
+            >
               Optimized templates ensure lightning-fast load times, improving
               user experience and SEO.
             </p>
@@ -5179,10 +5190,12 @@
                 <line x1="16" y1="17" x2="14.5" y2="18.5" />
               </svg>
             </div>
-            <h3 class="mt-6 text-lg font-semibold text-gray-800">
+            <h3 class="mt-6 text-2xl font-semibold text-gray-800">
               Fully Featured
             </h3>
-            <p class="mt-2 text-gray-600 leading-relaxed">
+            <p
+              class="text-base sm:text-lg md:text-xl max-w-3xl mt-2 text-gray-600 leading-relaxed"
+            >
               Everything you need is included—launch your site without
               installing extra tools.
             </p>
@@ -5214,7 +5227,7 @@
       </section>
 
       <!-- Team / Experts -->
-      <section class="py-20 text-center">
+      <section class="py-20 text-center font-['Roboto']">
         <h2 class="text-4xl font-bold text-[#2A9D8F] mb-5">
           Meet Our Local Experts
         </h2>
@@ -5224,7 +5237,8 @@
         >
           <!-- Card 1 -->
           <div
-            data-aos="fade-up"
+            data-aos="fade-right"
+            data-aos-duration="1000"
             class="px-2 py-4 mt-16 flex flex-col justify-center items-center text-center card"
           >
             <img
@@ -5240,6 +5254,7 @@
           <!-- Card 2 -->
           <div
             data-aos="fade-up"
+            data-aos-duration="1000"
             class="px-2 py-4 mt-16 flex flex-col justify-center items-center text-center card"
           >
             <img
@@ -5254,7 +5269,8 @@
           </div>
           <!-- Card 3 -->
           <div
-            data-aos="fade-up"
+            data-aos="fade-left"
+            data-aos-duration="1000"
             class="px-2 py-4 mt-16 flex flex-col justify-center items-center text-center card"
           >
             <img
@@ -5270,7 +5286,8 @@
         </div>
         <!-- Bottom Row: 4 Cards -->
         <div
-          data-aos="fade-up-right"
+          data-aos="fade-up"
+          data-aos-duration="1000"
           class="grid max-w-screen-xl px-4 pb-8 mx-auto grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mt-10"
         >
           <!-- Card 4 -->
@@ -5289,7 +5306,8 @@
           </div>
           <!-- Card 5 -->
           <div
-            data-aos="fade-left"
+            data-aos="fade-up"
+            data-aos-duration="1000"
             class="px-2 py-4 mt-16 flex flex-col justify-center items-center text-center card"
           >
             <img
@@ -5304,7 +5322,8 @@
           </div>
           <!-- Card 6 -->
           <div
-            data-aos="fade-left"
+            data-aos="fade-up"
+            data-aos-duration="1000"
             class="px-2 py-4 mt-16 flex flex-col justify-center items-center text-center card"
           >
             <img
@@ -5319,7 +5338,8 @@
           </div>
           <!-- Card 7 -->
           <div
-            data-aos="fade-up-left"
+            data-aos="fade-up"
+            data-aos-duration="1000"
             class="px-2 py-4 mt-16 flex flex-col justify-center items-center text-center card"
           >
             <img
@@ -5334,7 +5354,11 @@
           </div>
         </div>
       </section>
-      <section class="grid max-w-screen-xl px-4 pt-20 pb-8 mx-auto bg-white">
+      <section
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+        class="grid max-w-screen-xl px-4 pt-20 pb-8 mx-auto bg-white font-['Roboto']"
+      >
         <div class="container mx-auto px-4">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
             <!-- Left Column: Stats and Images -->
@@ -5342,7 +5366,9 @@
               <h2 class="text-4xl font-bold text-[#2A9D8F] mb-6">
                 A Paradise Village
               </h2>
-              <p class="text-gray-600 mb-8">
+              <p
+                class="text-gray-600 mb-8 text-base sm:text-lg md:text-xl max-w-3xl"
+              >
                 Discover the enchanting beauty of Cambodia, a land where ancient
                 temples and serene landscapes create a perfect escape.
               </p>
@@ -5378,7 +5404,9 @@
               <h2 class="text-4xl font-bold text-[#2A9D8F] mb-6">
                 Authentic Culture and Charm, Where Beauty Knows No Bounds
               </h2>
-              <p class="text-gray-600 mb-4">
+              <p
+                class="text-gray-600 mb-4 text-base sm:text-lg md:text-xl max-w-3xl"
+              >
                 Cambodia Travel invites you to experience the timeless allure of
                 the Kingdom of Wonder. From the majestic Angkor Wat to the
                 vibrant markets of Phnom Penh, our curated journeys immerse you
@@ -5482,7 +5510,7 @@
               rgba(0, 0, 0, 0.5),
               rgba(0, 0, 0, 0.5)
             ),
-            url(../../assets/image/pp.jpg);
+            url(../../assets/image/kirirombg.png);
           background-size: cover;
           background-position: center;
           background-attachment: fixed;
@@ -5493,7 +5521,7 @@
         <h2 class="text-4xl font-bold mb-4">
           Join Us in Preserving the Soul of Cambodia
         </h2>
-        <p class="mb-6 max-w-2xl mx-auto">
+        <p class="mb-6 mx-auto text-base sm:text-lg md:text-xl max-w-3xl">
           Travel with intention. Experience with respect. Leave with memories —
           and a piece of Cambodia in your heart.
         </p>
@@ -5513,10 +5541,7 @@
           1000
         );
       });
-      AOS.init({
-        duration: 1000,
-        once: true,
-      });
+      AOS.init();
     </script>
   </body>
 </html>
