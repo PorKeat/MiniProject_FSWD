@@ -133,6 +133,12 @@
               class="text-gray-500 font-roboto p-2 border-1 border-gray-300 rounded-md"
             >
               <img src="" alt="" />
+              <p>Sokha Preah Sihanouk Hotel</p>
+            </div>
+            <div
+              class="text-gray-500 font-roboto p-2 border-1 border-gray-300 rounded-md"
+            >
+              <img src="" alt="" />
               <p>Hotel Cambodiana</p>
             </div>
             <div
@@ -170,7 +176,12 @@
                 featuring the Royal Palace, museums, and lively riverfront.
               </p>
             </div>
-            <button class="bg-primary hover:bg-pr text-white p-2 rounded-md">
+            <button
+              onclick="showImage()"
+              data-image="../../assets/ImageServieces/allphoto-bangkok-snsPfG7tIcA-unsplash.jpg"
+              data-alt="Phnom Penh"
+              class="text-[#2A9D8F] hover:bg-pr py-1 rounded-md cursor-pointer"
+            >
               Learn More
             </button>
           </div>
@@ -187,7 +198,12 @@
                 architecture, pepper plantations, and the scenic Bokor Mountain.
               </p>
             </div>
-            <button class="bg-primary hover:bg-pr text-white p-2 rounded-md">
+            <button
+              onclick="showImage()"
+              data-image="../../assets/ImageServieces/tang-vyrak-vQ9OVtbpZPU-unsplash.jpg"
+              data-alt="Kompot"
+              class="bg-primary hover:bg-pr text-white p-2 rounded-md cursor-pointer"
+            >
               Learn More
             </button>
           </div>
@@ -229,10 +245,110 @@
               Learn More
             </button>
           </div>
+          <div class="p-2 border-1 border-gray-300 rounded-xl">
+            <img
+              src="../../assets/ImageServieces/tang-vyrak-vQ9OVtbpZPU-unsplash.jpg"
+              class="object-cover w-full rounded-[8px] h-60"
+              alt=""
+            />
+            <div class="py-1.5">
+              <p class="font-roboto font-bold text-xl text-gray-700">
+                Preah Sihanouk
+              </p>
+              <p>
+                A coastal city popular for its white-sand beaches, island
+                getaways, and relaxed seaside atmosphere.
+              </p>
+            </div>
+            <button class="bg-primary hover:bg-pr text-white p-2 rounded-md">
+              Learn More
+            </button>
+          </div>
+          <div class="p-2 border-1 border-gray-300 rounded-xl">
+            <img
+              src="../../assets/ImageServieces/tang-vyrak-vQ9OVtbpZPU-unsplash.jpg"
+              class="object-cover w-full rounded-[8px] h-60"
+              alt=""
+            />
+            <div class="py-1.5">
+              <p class="font-roboto font-bold text-xl text-gray-700">
+                Preah Sihanouk
+              </p>
+              <p>
+                A coastal city popular for its white-sand beaches, island
+                getaways, and relaxed seaside atmosphere.
+              </p>
+            </div>
+            <button class="bg-primary hover:bg-pr text-white p-2 rounded-md">
+              Learn More
+            </button>
+          </div>
+          <div class="p-2 border-1 border-gray-300 rounded-xl">
+            <img
+              src="../../assets/ImageServieces/tang-vyrak-vQ9OVtbpZPU-unsplash.jpg"
+              class="object-cover w-full rounded-[8px] h-60"
+              alt=""
+            />
+            <div class="py-1.5">
+              <p class="font-roboto font-bold text-xl text-gray-700">
+                Preah Sihanouk
+              </p>
+              <p>
+                A coastal city popular for its white-sand beaches, island
+                getaways, and relaxed seaside atmosphere.
+              </p>
+            </div>
+            <button class="bg-primary hover:bg-pr text-white p-2 rounded-md">
+              Learn More
+            </button>
+          </div>
+          <div class="p-2 border-1 border-gray-300 rounded-xl">
+            <img
+              src="../../assets/ImageServieces/tang-vyrak-vQ9OVtbpZPU-unsplash.jpg"
+              class="object-cover w-full rounded-[8px] h-60"
+              alt=""
+            />
+            <div class="py-1.5">
+              <p class="font-roboto font-bold text-xl text-gray-700">
+                Preah Sihanouk
+              </p>
+              <p>
+                A coastal city popular for its white-sand beaches, island
+                getaways, and relaxed seaside atmosphere.
+              </p>
+            </div>
+            <button class="bg-primary hover:bg-pr text-white p-2 rounded-md">
+              Learn More
+            </button>
+          </div>
         </div>
       </section>
     </main>
 
     <script type="module" src="../js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      function showImage() {
+        const imageUrl = event.currentTarget.getAttribute("data-image");
+        const imageAlt = event.currentTarget.getAttribute("data-alt");
+        Swal.fire({
+          imageUrl,
+          imageHeight: 150,
+          imageWidth: 500,
+          imageAlt,
+          title: "Hello",
+          text: "This is a custom image alert!",
+          confirmButtonText: "Hello",
+          confirmButtonColor: "#2A9D8F",
+        });
+      }
+
+      // Swal.fire({
+      //   imageUrl: "https://placeholder.pics/svg/300x1500",
+      //   imageHeight: 150,
+      //   imageWidth: 500,
+      //   imageAlt: "A tall image",
+      // });
+    </script>
   </body>
 </html>
