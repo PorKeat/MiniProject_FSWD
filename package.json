@@ -6,6 +6,6 @@
   },
   "scripts": {
     "start": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "push-dev": "git add . && git commit -m \"dev\" && git push origin dev"
+    "push-dev": "git pull origin dev && git add . && git commit -m \"dev\" && git push origin dev"
   }
 }
