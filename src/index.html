@@ -3,13 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="output.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Document</title>
   </head>
   <body>
-    <nav >
-      
-    </nav>
+    <header class="relative top-0 left-0 right-0 z-1000">
+      <nav id="navbar"></nav>
+      <section class="absolute -top-5 left-0 right-0 bottom-0 -z-10">
+        <img
+          src="../assets/image/allphoto-bangkok-o4ispOaaO48-unsplash.jpg"
+          class="object-cover w-[100%] h-[870px]"
+          alt=""
+        />
+      </section>
+      <div
+        class="absolute items-center bg-[rgba(84,84,84,0.1)] text-left top-56 left-[200px] w-[35%] h-[300px] rounded-2xl p-10"
+      >
+        <h1 class="text-5xl text-left text-amber-50 font-bold mt-10">
+          Welcome to Our Website
+        </h1>
+        <p class="text-left text-amber-50 mt-4">
+          Your one-stop solution for all your needs.
+        </p>
+        <button
+          class="bg-amber-500 mt-2 text-white py-2 px-4 rounded-full hover:bg-amber-600 transition duration-300"
+        >
+          Get Started
+        </button>
+      </div>
+    </header>
+    <main class="h-[200vh]"></main>
     <h1 class="text-red-500">Hello World</h1>
   </body>
+  <script src="../components/navbar.js"></script>
 </html>
