@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -105,23 +105,24 @@
   <script>
     const toggleButtons = document.querySelectorAll('.toggle-faq');
 
-    toggleButtons.forEach((button) => {
-      button.addEventListener('click', () => {
-        const currentItem = button.closest('.faq-item');
-        const currentAnswer = currentItem.querySelector('.faq-answer');
-        const currentIcon = button.querySelector('i');
+      toggleButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const currentItem = button.closest(".faq-item");
+          const currentAnswer = currentItem.querySelector(".faq-answer");
+          const currentIcon = button.querySelector("i");
 
-        document.querySelectorAll('.faq-item').forEach((item) => {
-          const answer = item.querySelector('.faq-answer');
-          const icon = item.querySelector('i');
+          document.querySelectorAll(".faq-item").forEach((item) => {
+            const answer = item.querySelector(".faq-answer");
+            const icon = item.querySelector("i");
 
-          if (item !== currentItem) {
-            answer.classList.add('hidden');
-            icon.classList.remove('rotate-180');
-          }
+            if (item !== currentItem) {
+              answer.classList.add("hidden");
+              icon.classList.remove("rotate-180");
+            }
+          });
+          currentAnswer.classList.toggle("hidden");
+          currentIcon.classList.toggle("rotate-180");
         });
-        currentAnswer.classList.toggle('hidden');
-        currentIcon.classList.toggle('rotate-180');
       });
     });
   </script>
