@@ -25,7 +25,9 @@
     </style>
   </head>
   <body>
-    <header></header>
+    <header>
+      <nav id="navbar"></nav>
+    </header>
     <main>
       <section>
         <!-- Hero Section with Parallax -->
@@ -43,12 +45,16 @@
               landscapes, rich heritage, and vibrant culture to travelers around
               the world.
             </p>
-            <a
-              href="#our-story"
-              class="bg-[#2A9D8F] text-gray-900 px-6 py-3 rounded-full font-semibold hover:bg-yellow-500 transition duration-300 transform hover:scale-105"
-            >
-              Explore Our Mission
-            </a>
+            <div class="flex gap-4 items-centerz justify-center">
+              <button class="cursor-pointer">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+              <button
+                class="bg-[#2A9D8F] hover:bg-[#21867A] py-2 px-4 rounded-full transition duration-300"
+              >
+                Explore Our Mission
+              </button>
+            </div>
           </div>
         </section>
       </section>
@@ -3311,8 +3317,8 @@
             class="px-2 py-4 mt-16 flex flex-col justify-center items-center text-center card"
           >
             <img
-              class="inline-flex object-cover border-4 border-[#2A9D8F] rounded-full shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-[#2A9D8F]/100 bg-indigo-50 text-[#2A9D8F] h-24 w-24 !h-48 !w-48"
-              src="../images/porkeat.jpg"
+              class="transition inline-flex object-cover border-4 border-[#2A9D8F] rounded-full shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-[#2A9D8F]/100 bg-indigo-50 text-[#2A9D8F] h-24 w-24 !h-48 !w-48"
+              src="../../assets/image/porkeat.jpg"
               alt="Seng Porkeat"
             />
             <h1 class="text-2xl text-gray-500 font-bold mt-2">Seng Porkeat</h1>
@@ -3327,7 +3333,7 @@
           >
             <img
               class="inline-flex object-cover border-4 border-[#2A9D8F] rounded-full shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-[#2A9D8F]/100 bg-indigo-50 text-[#2A9D8F] h-24 w-24 !h-48 !w-48"
-              src="../images/hav.jpg"
+              src="../../assets/image/hav.jpg"
               alt="Ho Hav"
             />
             <h1 class="text-2xl text-gray-500 font-bold mt-2">Ho Hav</h1>
@@ -3342,7 +3348,7 @@
           >
             <img
               class="inline-flex object-cover border-4 border-[#2A9D8F] rounded-full shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-[#2A9D8F]/100 bg-indigo-50 text-[#2A9D8F] h-24 w-24 !h-48 !w-48"
-              src="../images/kimhouy.jpg"
+              src="../../assets/image/kimhouy.jpg"
               alt="Bai Kimhouy"
             />
             <h1 class="text-2xl text-gray-500 font-bold mt-2">Bai Kimhouy</h1>
@@ -3362,7 +3368,7 @@
           >
             <img
               class="inline-flex object-cover border-4 border-[#2A9D8F] rounded-full shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-[#2A9D8F]/100 bg-indigo-50 text-[#2A9D8F] h-24 w-24 !h-48 !w-48"
-              src="../images/eric.jpg"
+              src="../../assets/image/eric.jpg"
               alt="Va Eric"
             />
             <h1 class="text-2xl text-gray-500 font-bold mt-2">Va Eric</h1>
@@ -3377,7 +3383,7 @@
           >
             <img
               class="inline-flex object-cover border-4 border-[#2A9D8F] rounded-full shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-[#2A9D8F]/100 bg-indigo-50 text-[#2A9D8F] h-24 w-24 !h-48 !w-48"
-              src="../images/Taiyi.jpg"
+              src="../../assets/image/Taiyi.jpg"
               alt="Korm Taiyi"
             />
             <h1 class="text-2xl text-gray-500 font-bold mt-2">Korm Taiyi</h1>
@@ -3392,7 +3398,7 @@
           >
             <img
               class="inline-flex object-cover border-4 border-[#2A9D8F] rounded-full shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-[#2A9D8F]/100 bg-indigo-50 text-[#2A9D8F] h-24 w-24 !h-48 !w-48"
-              src="../images/theara.jpg"
+              src="../../assets/image/theara.jpg"
               alt="Chim Theara"
             />
             <h1 class="text-2xl text-gray-500 font-bold mt-2">Chim Theara</h1>
@@ -3407,7 +3413,7 @@
           >
             <img
               class="inline-flex object-cover border-4 border-[#2A9D8F] rounded-full shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-[#2A9D8F]/100 bg-indigo-50 text-[#2A9D8F] h-24 w-24 !h-48 !w-48"
-              src="../images/vuthy.jpg"
+              src="../../assets/image/vuthy.jpg"
               alt="Tourn Vuthy"
             />
             <h1 class="text-2xl text-gray-500 font-bold mt-2">Tourn Vuthy</h1>
@@ -3454,18 +3460,6 @@
                   <p class="text-4xl font-bold text-green-700">7+</p>
                   <p class="text-gray-600 mt-2">Awards</p>
                 </div>
-              </div>
-              <div class="image-stack">
-                <img
-                  src="../images/AngkorWat.png"
-                  alt="Cambodian Culture"
-                  class="rounded-lg shadow-md w-4/4 h-[220px] object-cover transform hover:scale-105 transition duration-300"
-                />
-                <img
-                  src="../images/bk.png"
-                  alt="Angkor Wat"
-                  class="rounded-lg shadow-md w-full h-48 object-cover transform hover:scale-105 transition duration-300"
-                />
               </div>
             </div>
             <!-- Right Column: Description -->
@@ -3571,7 +3565,17 @@
       </section>
       <!-- Call to Action -->
       <section
-        class="py-16 bg-gradient-to-r from-green-600 to-green-400 text-white text-center"
+        style="
+          position: relative;
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.5),
+              rgba(0, 0, 0, 0.5)
+            ),
+            url(../../assets/image/Phnom\ Penh.png);
+          background-size: cover;
+          background-position: center;
+        "
+        class="py-16 bg-[#2A9D8F] text-white text-center"
       >
         <h2 class="text-3xl font-bold mb-4">
           Join Us in Preserving the Soul of Cambodia
@@ -3580,14 +3584,15 @@
           Travel with intention. Experience with respect. Leave with memories —
           and a piece of Cambodia in your heart.
         </p>
-        <a
-          href="/tours"
-          class="inline-block px-6 py-3 bg-white text-green-700 font-semibold rounded-full shadow hover:shadow-lg transition"
-          >Explore Tours</a
+        <button
+          class="bg-[#2A9D8F] hover:bg-[#21867A] py-2 px-4 rounded-full transition duration-300"
         >
+          <a href="services.html">Explore Tour</a>
+        </button>
       </section>
     </main>
     <footer></footer>
+    <script type="module" src="../js/script.js"></script>
     <script type="text/javascript">
       document.addEventListener('DOMContentLoaded', function () {
         window.setTimeout(
