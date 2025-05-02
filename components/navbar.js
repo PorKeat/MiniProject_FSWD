@@ -29,7 +29,7 @@
 //               alt="Logo"
 //               class="h-[25px] w-[20px] object-cover"
 //             />
-            
+
 //             <h1 class="font-black tracking-wide text-lg text-[#f5f5f5]">
 //               Sabay<span class="text-[#2A9D8F]">Trip</span>
 //             </h1>
@@ -192,7 +192,7 @@ const Navbar = () => {
   return `
     <section
       id="nav"
-      class="flex items-center justify-between py-4 px-6 w-[90%] md:w-[85%] lg:w-[75%] mx-auto text-[#f5f5f5] fixed left-0 right-0 z-[100] rounded-full transition-all duration-300 top-5 ease-in-out bg-transparent"
+      class="flex items-center justify-between py-4 px-6 w-[90%] md:w-[85%] lg:w-[75%] mx-auto text-white fixed left-0 right-0 z-[100] rounded-full transition-all duration-300 top-5 ease-in-out bg-transparent"
     >
       <!-- Logo -->
       <div>
@@ -210,7 +210,13 @@ const Navbar = () => {
 
       <!-- Desktop Nav -->
       <ul class="hidden lg:flex gap-7 mr-4 font-medium text-[16px]">
-        ${["index.html", "services.html", "about.html", "contact.html", "blog.html"]
+        ${[
+          "index.html",
+          "services.html",
+          "about.html",
+          "contact.html",
+          "blog.html",
+        ]
           .map((page) => {
             const label = page
               .replace(".html", "")
@@ -252,7 +258,13 @@ const Navbar = () => {
     <!-- Mobile Dropdown Menu -->
     <div id="mobileMenu" class="lg:hidden hidden absolute top-[70px] left-0 right-0 backdrop-blur-lg bg-[rgba(69,215,184,0.25)] shadow-lg z-[1000] py-4">
       <ul class="flex flex-col items-center gap-4 font-medium text-[16px]">
-        ${["index.html", "services.html", "about.html", "contact.html", "blog.html"]
+        ${[
+          "index.html",
+          "services.html",
+          "about.html",
+          "contact.html",
+          "blog.html",
+        ]
           .map((page) => {
             const label = page
               .replace(".html", "")
@@ -260,12 +272,16 @@ const Navbar = () => {
               .replace(/^\w/, (c) => c.toUpperCase());
             return `
               <li>
-                <a href="${getPageHref(page)}" class="hover:text-[#f5f5f5] text-[#f5f5f5] transition duration-300">${label}</a>
+                <a href="${getPageHref(
+                  page
+                )}" class="hover:text-[#f5f5f5] text-[#f5f5f5] transition duration-300">${label}</a>
               </li>`;
           })
           .join("")}
         <li>
-          <a href="${getPageHref("login.html")}" class="bg-[#f5f5f5] hover:bg-[#d3d3d3] py-2 px-4 rounded-full transition duration-300 text-primary">
+          <a href="${getPageHref(
+            "login.html"
+          )}" class="bg-[#f5f5f5] hover:bg-[#d3d3d3] py-2 px-4 rounded-full transition duration-300 text-primary">
             Log In
           </a>
         </li>
@@ -335,11 +351,35 @@ const NavbarScript = () => {
     window.addEventListener("scroll", function () {
       const scrollPosition = window.scrollY;
       if (scrollPosition > 100) {
-        navbar.classList.remove("w-[90%]", "md:w-[85%]", "lg:w-[75%]", "rounded-full", "top-5");
-        navbar.classList.add("w-full", "top-0", "bg-[rgba(36,36,36,0.1)]", "backdrop-blur-[32px]");
+        navbar.classList.remove(
+          "w-[90%]",
+          "md:w-[85%]",
+          "lg:w-[75%]",
+          "rounded-full",
+          "top-5",
+          "bg-transparent",
+        );
+        navbar.classList.add(
+          "w-full",
+          "top-0",
+          "bg-[rgba(36,36,36,0.4)]",
+          "backdrop-blur-[12px]",
+        );
       } else {
-        navbar.classList.remove("w-full", "top-0", "bg-[rgba(36,36,36,0.1)]", "backdrop-blur-[32px]");
-        navbar.classList.add("w-[90%]", "md:w-[85%]", "lg:w-[75%]", "rounded-full", "top-5");
+        navbar.classList.remove(
+          "w-full",
+          "top-0",
+          "bg-[rgba(36,36,36,0.4)]",
+          "backdrop-blur-[12px]",
+        );
+        navbar.classList.add(
+          "w-[90%]",
+          "md:w-[85%]",
+          "lg:w-[75%]",
+          "rounded-full",
+          "top-5",
+          "bg-transparent",
+        );
       }
     });
 
