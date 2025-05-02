@@ -1,34 +1,39 @@
 const Navbar = () => {
-    const currentPath = window.location.pathname;
-  
-    const getImageHref = (path) => {
-      if (currentPath.includes("pages")) {
-        return `../../assets/image/${path}`;
-      }
-      return `../assets/image/${path}`;
-    };
-  
-    const getPageHref = (path) => {
-      if (path === "index.html") {
-        return `/src/index.html`;
-      }
-      return `/src/pages/${path}`;
-    };
-  
-    return `
+  const currentPath = window.location.pathname;
+
+  const getImageHref = (path) => {
+    if (currentPath.includes("pages")) {
+      return `../../assets/image/${path}`;
+    }
+    return `../assets/image/${path}`;
+  };
+
+  const getPageHref = (path) => {
+    if (path === "index.html") {
+      return `/src/index.html`;
+    }
+    return `/src/pages/${path}`;
+  };
+
+  return `
         <section
           id="nav"
           class="flex items-center justify-between py-4 px-6 w-[75%] mx-auto text-amber-50 fixed left-0 right-0 z-[100] rounded-full transition-all duration-300 top-5 ease-in-out"
         >
-          <div class="flex items-center gap-2">
+          <div>
+          <a href="${getPageHref(
+            "index.html"
+          )}" class="flex items-center gap-2">
             <img
               src="${getImageHref("logo2.png")}"
               alt="Logo"
               class="h-[25px] w-[20px] object-cover"
             />
+            
             <h1 class="font-black tracking-wide text-lg text-[#f5f5f5]">
               Sabay<span class="text-[#2A9D8F]">Trip</span>
             </h1>
+            </a>
           </div>
           <ul class="flex gap-7 mr-4 font-medium text-[16px]">
             <li class="relative group">
@@ -74,13 +79,16 @@ const Navbar = () => {
           </ul>
           <div class="flex gap-4">
             <button class="cursor-pointer">
+
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
+            <a href="${getPageHref("login.html")}">
             <button
-              class="bg-[#2A9D8F] hover:bg-[#21867A] py-2 px-4 rounded-full transition duration-300"
+            class="bg-[#2A9D8F] hover:bg-[#21867A] py-2 px-4 rounded-full transition duration-300 cursor-pointer"
             >
-              Log In
-            </button>
+            Log In
+          </button>
+          </a>
           </div>
         </section>
         <!-- search -->
@@ -108,59 +116,59 @@ const Navbar = () => {
           </div>
         </div>
       `;
-  };
-  
-  const NavbarScript = () => {
-    document.addEventListener("DOMContentLoaded", () => {
-      document.getElementById("navbar").innerHTML = Navbar();
-  
-      const searchBtn = document.querySelector(".fa-magnifying-glass");
-      const modal = document.getElementById("searchModal");
-      const closeBtn = document.getElementById("closeModal");
-      const navbar = document.getElementById("nav");
-      const modalContent = modal.querySelector("div");
-      const closeBtnIcon = modal.querySelector("#closeModal");
-  
-      searchBtn.addEventListener("click", () => {
-        modal.classList.remove("hidden");
-        modal.offsetHeight;
-        modalContent.classList.remove("opacity-0", "translate-y-10");
-        modalContent.classList.add("opacity-100", "translate-y-0");
-        closeBtnIcon.classList.remove("opacity-0");
-        closeBtnIcon.classList.add("opacity-100");
-      });
-  
-      closeBtn.addEventListener("click", () => {
-        modalContent.classList.remove("opacity-100", "translate-y-0");
-        modalContent.classList.add("opacity-0", "translate-y-10");
-        closeBtnIcon.classList.remove("opacity-100");
-        closeBtnIcon.classList.add("opacity-0");
-        setTimeout(() => {
-          modal.classList.add("hidden");
-        }, 300);
-      });
-  
-      window.addEventListener("scroll", function () {
-        const scrollPosition = window.scrollY;
-        if (scrollPosition > 100) {
-          navbar.classList.remove("w-[75%]", "rounded-full", "top-5");
-          navbar.classList.add(
-            "w-[100%]",
-            "top-0",
-            "bg-[rgba(36,36,36,0.1)]",
-            "backdrop-blur-[32px]"
-          );
-        } else {
-          navbar.classList.remove(
-            "w-[100%]",
-            "top-0",
-            "bg-[rgba(36,36,36,0.1)]",
-            "backdrop-blur-[32px]"
-          );
-          navbar.classList.add("w-[75%]", "rounded-full", "top-5");
-        }
-      });
+};
+
+const NavbarScript = () => {
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("navbar").innerHTML = Navbar();
+
+    const searchBtn = document.querySelector(".fa-magnifying-glass");
+    const modal = document.getElementById("searchModal");
+    const closeBtn = document.getElementById("closeModal");
+    const navbar = document.getElementById("nav");
+    const modalContent = modal.querySelector("div");
+    const closeBtnIcon = modal.querySelector("#closeModal");
+
+    searchBtn.addEventListener("click", () => {
+      modal.classList.remove("hidden");
+      modal.offsetHeight;
+      modalContent.classList.remove("opacity-0", "translate-y-10");
+      modalContent.classList.add("opacity-100", "translate-y-0");
+      closeBtnIcon.classList.remove("opacity-0");
+      closeBtnIcon.classList.add("opacity-100");
     });
-  };
-  
-  export default NavbarScript;
+
+    closeBtn.addEventListener("click", () => {
+      modalContent.classList.remove("opacity-100", "translate-y-0");
+      modalContent.classList.add("opacity-0", "translate-y-10");
+      closeBtnIcon.classList.remove("opacity-100");
+      closeBtnIcon.classList.add("opacity-0");
+      setTimeout(() => {
+        modal.classList.add("hidden");
+      }, 300);
+    });
+
+    window.addEventListener("scroll", function () {
+      const scrollPosition = window.scrollY;
+      if (scrollPosition > 100) {
+        navbar.classList.remove("w-[75%]", "rounded-full", "top-5");
+        navbar.classList.add(
+          "w-[100%]",
+          "top-0",
+          "bg-[rgba(36,36,36,0.1)]",
+          "backdrop-blur-[32px]"
+        );
+      } else {
+        navbar.classList.remove(
+          "w-[100%]",
+          "top-0",
+          "bg-[rgba(36,36,36,0.1)]",
+          "backdrop-blur-[32px]"
+        );
+        navbar.classList.add("w-[75%]", "rounded-full", "top-5");
+      }
+    });
+  });
+};
+
+export default NavbarScript;
