@@ -80,52 +80,48 @@
       <nav id="navbar"></nav>
     </header>
     <main>
-      <section>
-        <!-- Hero Section with Parallax -->
-        <section
-          class="parallax text-white py-32 relative w-full h-[870px] font-mukta"
-          style="
-            position: relative;
-            background-image: linear-gradient(
-                rgba(0, 0, 0, 0.222),
-                rgba(0, 0, 0, 0.222)
-              ),
-              url(../../assets/image/Phnom\ Penh.png);
-            background-size: cover;
-            background-position: center;
-          "
+      <section
+        class="relative w-full h-[870px] font-mukta text-white bg-cover bg-center py-32"
+        style="
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.222),
+              rgba(0, 0, 0, 0.222)
+            ),
+            url('../../assets/image/Phnom%20Penh.png');
+        "
+      >
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 bg-black opacity-50 z-0"></div>
+
+        <!-- Content -->
+        <div
+          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 text-center w-[90%] sm:w-[80%] md:w-[70%] lg:w-[50%] p-6 sm:p-8 rounded-2xl"
+          data-aos="fade-up" data-aos-duration="1000"
         >
-          <div class="absolute inset-0 bg-black opacity-50"></div>
-          <div
-            class="absolute top-[25rem] left-[50%] transform -translate-x-[50%] -translate-y-[50%] text-center w-[40%] sm:w-[60%] lg:w-[40%] p-8 rounded-2xl"
-            data-aos="fade-up"
+          <h1
+            class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
           >
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">
-              Welcome to Discover Cambodia
-            </h1>
-            <p class="text-lg md:text-2xl max-w-3xl mx-auto mb-8">
-              We are passionate about showcasing Cambodia's breathtaking
-              landscapes, rich heritage, and vibrant culture to travelers around
-              the world.
-            </p>
-            <div class="flex gap-4 items-centerz justify-center">
-              <a href="#story">
-                <button class="cursor-pointer">
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-                <button
-                  class="bg-[#2A9D8F] hover:bg-[#21867A] py-2 px-4 rounded-full transition duration-300"
-                >
-                  Explore Our Story
-                </button>
-              </a>
-            </div>
-          </div>
-        </section>
+            Welcome to Discover Cambodia
+          </h1>
+          <p class="text-base sm:text-lg md:text-xl lg:text-2xl mb-8">
+            We are passionate about showcasing Cambodia's breathtaking
+            landscapes, rich heritage, and vibrant culture to travelers around
+            the world.
+          </p>
+
+          <a href="#story">
+            <button
+              class="bg-[#2A9D8F] hover:bg-[#21867A] py-2 px-6 rounded-full transition duration-300 text-white text-sm sm:text-base"
+            >
+              <i class="fa-solid fa-magnifying-glass mr-2"></i>
+              Explore Our Story
+            </button>
+          </a>
+        </div>
       </section>
 
       <!-- Who We Are -->
-      <section id="story" class="py-20 px-6 text-center bg-gray-50">
+      <section id="story" class="py-20 px-6 m-auto w-[90%] text-center bg-gray-50">
         <h2 class="text-4xl font-bold text-[#2A9D8F] mb-6">Who We Are</h2>
         <p class="text-base sm:text-lg md:text-xl mx-auto text-gray-600">
           We are a local team of travel lovers, historians, photographers, and
@@ -5258,7 +5254,11 @@
             </h2>
             <ul class="flex flex-row mt-2">
               <li class="mx-2">
-                <a href="" target="_blank" aria-label="GitHub">
+                <a
+                  href="https://github.com/PorKeat"
+                  target="_blank"
+                  aria-label="GitHub"
+                >
                   <svg
                     class="h-6 text-[#2A9D8F] hover:text-teal-300"
                     fill="currentColor"
@@ -5275,7 +5275,11 @@
               </li>
 
               <li class="mx-2">
-                <a href="" target="_blank" aria-label="LinkedIn">
+                <a
+                  href="https://www.facebook.com/por.keat.2025/"
+                  target="_blank"
+                  aria-label="LinkedIn"
+                >
                   <svg
                     class="h-6 text-[#2A9D8F] hover:text-teal-300"
                     fill="currentColor"
@@ -5286,57 +5290,6 @@
                     <title>LinkedIn</title>
                     <path
                       d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                    ></path>
-                  </svg>
-                </a>
-              </li>
-
-              <li class="mx-2">
-                <a href="" target="_blank" aria-label="Twitter">
-                  <svg
-                    class="h-6 text-[#2A9D8F] hover:text-teal-300"
-                    fill="currentColor"
-                    role="img"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>Twitter</title>
-                    <path
-                      d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
-                    ></path>
-                  </svg>
-                </a>
-              </li>
-
-              <li class="mx-2">
-                <a href="" target="_blank" aria-label="Unsplash">
-                  <svg
-                    class="h-6 text-[#2A9D8F] hover:text-teal-300"
-                    fill="currentColor"
-                    role="img"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>Unsplash</title>
-                    <path
-                      d="M7.5 6.75V0h9v6.75h-9zm9 3.75H24V24H0V10.5h7.5v6.75h9V10.5z"
-                    ></path>
-                  </svg>
-                </a>
-              </li>
-
-              <li class="mx-2">
-                <a href="" target="_blank" aria-label="Email">
-                  <svg
-                    class="h-6 text-[#2A9D8F] hover:text-teal-300"
-                    fill="currentColor"
-                    role="img"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>Mail.Ru</title>
-                    <path
-                      d="M15.61 12c0 1.99-1.62 3.61-3.61 3.61-1.99 0-3.61-1.62-3.61-3.61 0-1.99 1.62-3.61 3.61-3.61 1.99 0 3.61 1.62 3.61 3.61M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12c2.424 0 4.761-.722 6.76-2.087l.034-.024-1.617-1.879-.027.017A9.494 9.494 0 0 1 12 21.54c-5.26 0-9.54-4.28-9.54-9.54 0-5.26 4.28-9.54 9.54-9.54 5.26 0 9.54 4.28 9.54 9.54a9.63 9.63 0 0 1-.225 2.05c-.301 1.239-1.169 1.618-1.82 1.568-.654-.053-1.42-.52-1.426-1.661V12A6.076 6.076 0 0 0 12 5.93 6.076 6.076 0 0 0 5.93 12 6.076 6.076 0 0 0 12 18.07a6.02 6.02 0 0 0 4.3-1.792 3.9 3.9 0 0 0 3.32 1.805c.874 0 1.74-.292 2.437-.821.719-.547 1.256-1.336 1.553-2.285.047-.154.135-.504.135-.507l.002-.013c.175-.76.253-1.52.253-2.457 0-6.617-5.383-12-12-12"
                     ></path>
                   </svg>
                 </a>
@@ -5392,57 +5345,6 @@
                   </svg>
                 </a>
               </li>
-
-              <li class="mx-2">
-                <a href="" target="_blank" aria-label="Twitter">
-                  <svg
-                    class="h-6 text-[#2A9D8F] hover:text-teal-300"
-                    fill="currentColor"
-                    role="img"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>Twitter</title>
-                    <path
-                      d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
-                    ></path>
-                  </svg>
-                </a>
-              </li>
-
-              <li class="mx-2">
-                <a href="" target="_blank" aria-label="Unsplash">
-                  <svg
-                    class="h-6 text-[#2A9D8F] hover:text-teal-300"
-                    fill="currentColor"
-                    role="img"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>Unsplash</title>
-                    <path
-                      d="M7.5 6.75V0h9v6.75h-9zm9 3.75H24V24H0V10.5h7.5v6.75h9V10.5z"
-                    ></path>
-                  </svg>
-                </a>
-              </li>
-
-              <li class="mx-2">
-                <a href="" target="_blank" aria-label="Email">
-                  <svg
-                    class="h-6 text-[#2A9D8F] hover:text-teal-300"
-                    fill="currentColor"
-                    role="img"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>Mail.Ru</title>
-                    <path
-                      d="M15.61 12c0 1.99-1.62 3.61-3.61 3.61-1.99 0-3.61-1.62-3.61-3.61 0-1.99 1.62-3.61 3.61-3.61 1.99 0 3.61 1.62 3.61 3.61M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12c2.424 0 4.761-.722 6.76-2.087l.034-.024-1.617-1.879-.027.017A9.494 9.494 0 0 1 12 21.54c-5.26 0-9.54-4.28-9.54-9.54 0-5.26 4.28-9.54 9.54-9.54 5.26 0 9.54 4.28 9.54 9.54a9.63 9.63 0 0 1-.225 2.05c-.301 1.239-1.169 1.618-1.82 1.568-.654-.053-1.42-.52-1.426-1.661V12A6.076 6.076 0 0 0 12 5.93 6.076 6.076 0 0 0 5.93 12 6.076 6.076 0 0 0 12 18.07a6.02 6.02 0 0 0 4.3-1.792 3.9 3.9 0 0 0 3.32 1.805c.874 0 1.74-.292 2.437-.821.719-.547 1.256-1.336 1.553-2.285.047-.154.135-.504.135-.507l.002-.013c.175-.76.253-1.52.253-2.457 0-6.617-5.383-12-12-12"
-                    ></path>
-                  </svg>
-                </a>
-              </li>
             </ul>
           </div>
           <!-- Card 3 -->
@@ -5462,7 +5364,11 @@
             </h2>
             <ul class="flex flex-row mt-2">
               <li class="mx-2">
-                <a href="" target="_blank" aria-label="GitHub">
+                <a
+                  href="https://github.com/baikimhouy"
+                  target="_blank"
+                  aria-label="GitHub"
+                >
                   <svg
                     class="h-6 text-[#2A9D8F] hover:text-teal-300"
                     fill="currentColor"
@@ -5479,7 +5385,11 @@
               </li>
 
               <li class="mx-2">
-                <a href="" target="_blank" aria-label="LinkedIn">
+                <a
+                  href="https://web.facebook.com/ymir.fritz70"
+                  target="_blank"
+                  aria-label="LinkedIn"
+                >
                   <svg
                     class="h-6 text-[#2A9D8F] hover:text-teal-300"
                     fill="currentColor"
@@ -5490,57 +5400,6 @@
                     <title>LinkedIn</title>
                     <path
                       d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                    ></path>
-                  </svg>
-                </a>
-              </li>
-
-              <li class="mx-2">
-                <a href="" target="_blank" aria-label="Twitter">
-                  <svg
-                    class="h-6 text-[#2A9D8F] hover:text-teal-300"
-                    fill="currentColor"
-                    role="img"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>Twitter</title>
-                    <path
-                      d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
-                    ></path>
-                  </svg>
-                </a>
-              </li>
-
-              <li class="mx-2">
-                <a href="" target="_blank" aria-label="Unsplash">
-                  <svg
-                    class="h-6 text-[#2A9D8F] hover:text-teal-300"
-                    fill="currentColor"
-                    role="img"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>Unsplash</title>
-                    <path
-                      d="M7.5 6.75V0h9v6.75h-9zm9 3.75H24V24H0V10.5h7.5v6.75h9V10.5z"
-                    ></path>
-                  </svg>
-                </a>
-              </li>
-
-              <li class="mx-2">
-                <a href="" target="_blank" aria-label="Email">
-                  <svg
-                    class="h-6 text-[#2A9D8F] hover:text-teal-300"
-                    fill="currentColor"
-                    role="img"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>Mail.Ru</title>
-                    <path
-                      d="M15.61 12c0 1.99-1.62 3.61-3.61 3.61-1.99 0-3.61-1.62-3.61-3.61 0-1.99 1.62-3.61 3.61-3.61 1.99 0 3.61 1.62 3.61 3.61M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12c2.424 0 4.761-.722 6.76-2.087l.034-.024-1.617-1.879-.027.017A9.494 9.494 0 0 1 12 21.54c-5.26 0-9.54-4.28-9.54-9.54 0-5.26 4.28-9.54 9.54-9.54 5.26 0 9.54 4.28 9.54 9.54a9.63 9.63 0 0 1-.225 2.05c-.301 1.239-1.169 1.618-1.82 1.568-.654-.053-1.42-.52-1.426-1.661V12A6.076 6.076 0 0 0 12 5.93 6.076 6.076 0 0 0 5.93 12 6.076 6.076 0 0 0 12 18.07a6.02 6.02 0 0 0 4.3-1.792 3.9 3.9 0 0 0 3.32 1.805c.874 0 1.74-.292 2.437-.821.719-.547 1.256-1.336 1.553-2.285.047-.154.135-.504.135-.507l.002-.013c.175-.76.253-1.52.253-2.457 0-6.617-5.383-12-12-12"
                     ></path>
                   </svg>
                 </a>
@@ -5569,7 +5428,11 @@
             </h2>
             <ul class="flex flex-row mt-2">
               <li class="mx-2">
-                <a href="" target="_blank" aria-label="GitHub">
+                <a
+                  href="https://github.com/ericva01"
+                  target="_blank"
+                  aria-label="GitHub"
+                >
                   <svg
                     class="h-6 text-[#2A9D8F] hover:text-teal-300"
                     fill="currentColor"
@@ -5586,7 +5449,11 @@
               </li>
 
               <li class="mx-2">
-                <a href="" target="_blank" aria-label="LinkedIn">
+                <a
+                  href="https://www.facebook.com/share/1AWQFQge1b/?mibextid=wwXIfr"
+                  target="_blank"
+                  aria-label="LinkedIn"
+                >
                   <svg
                     class="h-6 text-[#2A9D8F] hover:text-teal-300"
                     fill="currentColor"
@@ -5597,57 +5464,6 @@
                     <title>LinkedIn</title>
                     <path
                       d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                    ></path>
-                  </svg>
-                </a>
-              </li>
-
-              <li class="mx-2">
-                <a href="" target="_blank" aria-label="Twitter">
-                  <svg
-                    class="h-6 text-[#2A9D8F] hover:text-teal-300"
-                    fill="currentColor"
-                    role="img"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>Twitter</title>
-                    <path
-                      d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
-                    ></path>
-                  </svg>
-                </a>
-              </li>
-
-              <li class="mx-2">
-                <a href="" target="_blank" aria-label="Unsplash">
-                  <svg
-                    class="h-6 text-[#2A9D8F] hover:text-teal-300"
-                    fill="currentColor"
-                    role="img"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>Unsplash</title>
-                    <path
-                      d="M7.5 6.75V0h9v6.75h-9zm9 3.75H24V24H0V10.5h7.5v6.75h9V10.5z"
-                    ></path>
-                  </svg>
-                </a>
-              </li>
-
-              <li class="mx-2">
-                <a href="" target="_blank" aria-label="Email">
-                  <svg
-                    class="h-6 text-[#2A9D8F] hover:text-teal-300"
-                    fill="currentColor"
-                    role="img"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>Mail.Ru</title>
-                    <path
-                      d="M15.61 12c0 1.99-1.62 3.61-3.61 3.61-1.99 0-3.61-1.62-3.61-3.61 0-1.99 1.62-3.61 3.61-3.61 1.99 0 3.61 1.62 3.61 3.61M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12c2.424 0 4.761-.722 6.76-2.087l.034-.024-1.617-1.879-.027.017A9.494 9.494 0 0 1 12 21.54c-5.26 0-9.54-4.28-9.54-9.54 0-5.26 4.28-9.54 9.54-9.54 5.26 0 9.54 4.28 9.54 9.54a9.63 9.63 0 0 1-.225 2.05c-.301 1.239-1.169 1.618-1.82 1.568-.654-.053-1.42-.52-1.426-1.661V12A6.076 6.076 0 0 0 12 5.93 6.076 6.076 0 0 0 5.93 12 6.076 6.076 0 0 0 12 18.07a6.02 6.02 0 0 0 4.3-1.792 3.9 3.9 0 0 0 3.32 1.805c.874 0 1.74-.292 2.437-.821.719-.547 1.256-1.336 1.553-2.285.047-.154.135-.504.135-.507l.002-.013c.175-.76.253-1.52.253-2.457 0-6.617-5.383-12-12-12"
                     ></path>
                   </svg>
                 </a>
@@ -5671,7 +5487,11 @@
             </h2>
             <ul class="flex flex-row mt-2">
               <li class="mx-2">
-                <a href="" target="_blank" aria-label="GitHub">
+                <a
+                  href="https://web.facebook.com/korm.taiyi.5"
+                  target="_blank"
+                  aria-label="GitHub"
+                >
                   <svg
                     class="h-6 text-[#2A9D8F] hover:text-teal-300"
                     fill="currentColor"
@@ -5688,7 +5508,11 @@
               </li>
 
               <li class="mx-2">
-                <a href="" target="_blank" aria-label="LinkedIn">
+                <a
+                  href="https://web.facebook.com/korm.taiyi.5"
+                  target="_blank"
+                  aria-label="LinkedIn"
+                >
                   <svg
                     class="h-6 text-[#2A9D8F] hover:text-teal-300"
                     fill="currentColor"
@@ -5699,57 +5523,6 @@
                     <title>LinkedIn</title>
                     <path
                       d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                    ></path>
-                  </svg>
-                </a>
-              </li>
-
-              <li class="mx-2">
-                <a href="" target="_blank" aria-label="Twitter">
-                  <svg
-                    class="h-6 text-[#2A9D8F] hover:text-teal-300"
-                    fill="currentColor"
-                    role="img"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>Twitter</title>
-                    <path
-                      d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
-                    ></path>
-                  </svg>
-                </a>
-              </li>
-
-              <li class="mx-2">
-                <a href="" target="_blank" aria-label="Unsplash">
-                  <svg
-                    class="h-6 text-[#2A9D8F] hover:text-teal-300"
-                    fill="currentColor"
-                    role="img"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>Unsplash</title>
-                    <path
-                      d="M7.5 6.75V0h9v6.75h-9zm9 3.75H24V24H0V10.5h7.5v6.75h9V10.5z"
-                    ></path>
-                  </svg>
-                </a>
-              </li>
-
-              <li class="mx-2">
-                <a href="" target="_blank" aria-label="Email">
-                  <svg
-                    class="h-6 text-[#2A9D8F] hover:text-teal-300"
-                    fill="currentColor"
-                    role="img"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>Mail.Ru</title>
-                    <path
-                      d="M15.61 12c0 1.99-1.62 3.61-3.61 3.61-1.99 0-3.61-1.62-3.61-3.61 0-1.99 1.62-3.61 3.61-3.61 1.99 0 3.61 1.62 3.61 3.61M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12c2.424 0 4.761-.722 6.76-2.087l.034-.024-1.617-1.879-.027.017A9.494 9.494 0 0 1 12 21.54c-5.26 0-9.54-4.28-9.54-9.54 0-5.26 4.28-9.54 9.54-9.54 5.26 0 9.54 4.28 9.54 9.54a9.63 9.63 0 0 1-.225 2.05c-.301 1.239-1.169 1.618-1.82 1.568-.654-.053-1.42-.52-1.426-1.661V12A6.076 6.076 0 0 0 12 5.93 6.076 6.076 0 0 0 5.93 12 6.076 6.076 0 0 0 12 18.07a6.02 6.02 0 0 0 4.3-1.792 3.9 3.9 0 0 0 3.32 1.805c.874 0 1.74-.292 2.437-.821.719-.547 1.256-1.336 1.553-2.285.047-.154.135-.504.135-.507l.002-.013c.175-.76.253-1.52.253-2.457 0-6.617-5.383-12-12-12"
                     ></path>
                   </svg>
                 </a>
@@ -5773,7 +5546,11 @@
             </h2>
             <ul class="flex flex-row mt-2">
               <li class="mx-2">
-                <a href="" target="_blank" aria-label="GitHub">
+                <a
+                  href="https://github.com/theara24"
+                  target="_blank"
+                  aria-label="GitHub"
+                >
                   <svg
                     class="h-6 text-[#2A9D8F] hover:text-teal-300"
                     fill="currentColor"
@@ -5790,7 +5567,11 @@
               </li>
 
               <li class="mx-2">
-                <a href="" target="_blank" aria-label="LinkedIn">
+                <a
+                  href="https://www.linkedin.com/in/theara-chim-971845341/"
+                  target="_blank"
+                  aria-label="LinkedIn"
+                >
                   <svg
                     class="h-6 text-[#2A9D8F] hover:text-teal-300"
                     fill="currentColor"
@@ -5801,57 +5582,6 @@
                     <title>LinkedIn</title>
                     <path
                       d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                    ></path>
-                  </svg>
-                </a>
-              </li>
-
-              <li class="mx-2">
-                <a href="" target="_blank" aria-label="Twitter">
-                  <svg
-                    class="h-6 text-[#2A9D8F] hover:text-teal-300"
-                    fill="currentColor"
-                    role="img"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>Twitter</title>
-                    <path
-                      d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
-                    ></path>
-                  </svg>
-                </a>
-              </li>
-
-              <li class="mx-2">
-                <a href="" target="_blank" aria-label="Unsplash">
-                  <svg
-                    class="h-6 text-[#2A9D8F] hover:text-teal-300"
-                    fill="currentColor"
-                    role="img"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>Unsplash</title>
-                    <path
-                      d="M7.5 6.75V0h9v6.75h-9zm9 3.75H24V24H0V10.5h7.5v6.75h9V10.5z"
-                    ></path>
-                  </svg>
-                </a>
-              </li>
-
-              <li class="mx-2">
-                <a href="" target="_blank" aria-label="Email">
-                  <svg
-                    class="h-6 text-[#2A9D8F] hover:text-teal-300"
-                    fill="currentColor"
-                    role="img"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>Mail.Ru</title>
-                    <path
-                      d="M15.61 12c0 1.99-1.62 3.61-3.61 3.61-1.99 0-3.61-1.62-3.61-3.61 0-1.99 1.62-3.61 3.61-3.61 1.99 0 3.61 1.62 3.61 3.61M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12c2.424 0 4.761-.722 6.76-2.087l.034-.024-1.617-1.879-.027.017A9.494 9.494 0 0 1 12 21.54c-5.26 0-9.54-4.28-9.54-9.54 0-5.26 4.28-9.54 9.54-9.54 5.26 0 9.54 4.28 9.54 9.54a9.63 9.63 0 0 1-.225 2.05c-.301 1.239-1.169 1.618-1.82 1.568-.654-.053-1.42-.52-1.426-1.661V12A6.076 6.076 0 0 0 12 5.93 6.076 6.076 0 0 0 5.93 12 6.076 6.076 0 0 0 12 18.07a6.02 6.02 0 0 0 4.3-1.792 3.9 3.9 0 0 0 3.32 1.805c.874 0 1.74-.292 2.437-.821.719-.547 1.256-1.336 1.553-2.285.047-.154.135-.504.135-.507l.002-.013c.175-.76.253-1.52.253-2.457 0-6.617-5.383-12-12-12"
                     ></path>
                   </svg>
                 </a>
@@ -5875,7 +5605,11 @@
             </h2>
             <ul class="flex flex-row mt-2">
               <li class="mx-2">
-                <a href="" target="_blank" aria-label="GitHub">
+                <a
+                  href="https://github.com/Vuthy-Tourn"
+                  target="_blank"
+                  aria-label="GitHub"
+                >
                   <svg
                     class="h-6 text-[#2A9D8F] hover:text-teal-300"
                     fill="currentColor"
@@ -5892,7 +5626,11 @@
               </li>
 
               <li class="mx-2">
-                <a href="" target="_blank" aria-label="LinkedIn">
+                <a
+                  href="https://web.facebook.com/nhom.vothy/"
+                  target="_blank"
+                  aria-label="LinkedIn"
+                >
                   <svg
                     class="h-6 text-[#2A9D8F] hover:text-teal-300"
                     fill="currentColor"
@@ -5903,57 +5641,6 @@
                     <title>LinkedIn</title>
                     <path
                       d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                    ></path>
-                  </svg>
-                </a>
-              </li>
-
-              <li class="mx-2">
-                <a href="" target="_blank" aria-label="Twitter">
-                  <svg
-                    class="h-6 text-[#2A9D8F] hover:text-teal-300"
-                    fill="currentColor"
-                    role="img"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>Twitter</title>
-                    <path
-                      d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
-                    ></path>
-                  </svg>
-                </a>
-              </li>
-
-              <li class="mx-2">
-                <a href="" target="_blank" aria-label="Unsplash">
-                  <svg
-                    class="h-6 text-[#2A9D8F] hover:text-teal-300"
-                    fill="currentColor"
-                    role="img"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>Unsplash</title>
-                    <path
-                      d="M7.5 6.75V0h9v6.75h-9zm9 3.75H24V24H0V10.5h7.5v6.75h9V10.5z"
-                    ></path>
-                  </svg>
-                </a>
-              </li>
-
-              <li class="mx-2">
-                <a href="" target="_blank" aria-label="Email">
-                  <svg
-                    class="h-6 text-[#2A9D8F] hover:text-teal-300"
-                    fill="currentColor"
-                    role="img"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>Mail.Ru</title>
-                    <path
-                      d="M15.61 12c0 1.99-1.62 3.61-3.61 3.61-1.99 0-3.61-1.62-3.61-3.61 0-1.99 1.62-3.61 3.61-3.61 1.99 0 3.61 1.62 3.61 3.61M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12c2.424 0 4.761-.722 6.76-2.087l.034-.024-1.617-1.879-.027.017A9.494 9.494 0 0 1 12 21.54c-5.26 0-9.54-4.28-9.54-9.54 0-5.26 4.28-9.54 9.54-9.54 5.26 0 9.54 4.28 9.54 9.54a9.63 9.63 0 0 1-.225 2.05c-.301 1.239-1.169 1.618-1.82 1.568-.654-.053-1.42-.52-1.426-1.661V12A6.076 6.076 0 0 0 12 5.93 6.076 6.076 0 0 0 5.93 12 6.076 6.076 0 0 0 12 18.07a6.02 6.02 0 0 0 4.3-1.792 3.9 3.9 0 0 0 3.32 1.805c.874 0 1.74-.292 2.437-.821.719-.547 1.256-1.336 1.553-2.285.047-.154.135-.504.135-.507l.002-.013c.175-.76.253-1.52.253-2.457 0-6.617-5.383-12-12-12"
                     ></path>
                   </svg>
                 </a>
