@@ -12,28 +12,44 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="style/style.css" />
     <title>Document</title>
   </head>
-  <body class="overflow-x-hidden">
-    <header>
+  <body class="overflow-x-hidden font-mukta">
+    <header class="h-[870px]">
       <nav id="navbar"></nav>
       <section class="relative top-0 left-0 right-0 bottom-0 -z-10">
-        <div id="heroImages">
-          <img
-            src="../assets/image/allphoto-bangkok-o4ispOaaO48-unsplash.jpg"
-            class="absolute top-0 left-0 object-cover w-full h-[870px] scale-100 transition-opacity duration-1000 ease-in-out opacity-100 brightness-50"
-            alt="khmer temple"
-          />
-          <img
-            src="../assets/image/tin-ly-ok29ddIXY58-unsplash.jpg"
-            class="absolute top-0 left-0 object-cover w-full h-[870px] scale-100 transition-opacity duration-1000 ease-in-out opacity-0 brightness-50"
-            alt="khmer temple in the jungle"
-          />
-          <img
-            src="../assets/image/james-wheeler-9zXMb-E8pI0-unsplash.jpg"
-            class="absolute top-0 left-0 object-cover w-full h-[870px] scale-100 transition-opacity duration-1000 ease-in-out opacity-0 brightness-50"
-            alt="beach view"
-          />
+        <div id="heroImages" class="relative h-[870px] overflow-hidden">
+          <div
+            id="backgroundSlider"
+            class="absolute top-0 left-0 w-full h-full z-0"
+          >
+            <img
+              src="../assets/image/allphoto-bangkok-o4ispOaaO48-unsplash.jpg"
+              class="absolute top-0 left-0 object-cover w-full h-full scale-100 transition-opacity duration-1000 ease-in-out opacity-100 brightness-80"
+              alt="khmer temple"
+            />
+            <img
+              src="../assets/image/tin-ly-ok29ddIXY58-unsplash.jpg"
+              class="absolute top-0 left-0 object-cover w-full h-full scale-100 transition-opacity duration-1000 ease-in-out opacity-0 brightness-80"
+              alt="khmer temple in the jungle"
+            />
+            <img
+              src="../assets/image/james-wheeler-9zXMb-E8pI0-unsplash.jpg"
+              class="absolute top-0 left-0 object-cover w-full h-full scale-100 transition-opacity duration-1000 ease-in-out opacity-0 brightness-80"
+              alt="beach view"
+            />
+          </div>
+
+          <div
+            class="absolute -bottom-[50px] left-0 w-full z-10 pointer-events-none"
+          >
+            <img
+              src="../assets/image/HeroOne.png"
+              alt="Hero graphic"
+              class="w-full object-contain"
+            />
+          </div>
         </div>
       </section>
 
@@ -77,37 +93,64 @@
         </button>
       </article>
     </header>
-    <main class="h-[200vh]"></main>
-    <h1 class="text-red-500">Hello World</h1>
+    <main class="h-[200vh]">
+      <section class="text-center mt-20">
+        <p class="text-[30px] text-primary cursiveFont">Plan your trip</p>
+        <h2 class="text-[40px] font-bold">
+          Let us plan you a <br />
+          perfect Holiday
+        </h2>
+      </section>
+    </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script>
-      window.addEventListener("load", function () {
+      window.addEventListener("load", () => {
         let currentIndex = 0;
-        const images = document.querySelectorAll("#heroImages img");
+        const images = document.querySelectorAll("#backgroundSlider img");
+
         const prevArrow = document.getElementById("prevArrow");
         const nextArrow = document.getElementById("nextArrow");
-        function updateImage(newIndex) {
+        let autoSlideInterval;
+
+        const updateImage = (newIndex) => {
           images[currentIndex].classList.remove("opacity-100");
           images[currentIndex].classList.add("opacity-0");
           currentIndex = newIndex;
           images[currentIndex].classList.remove("opacity-0");
           images[currentIndex].classList.add("opacity-100");
-        }
+        };
 
-
-        function showNextImage() {
+        const showNextImage = () => {
           const newIndex = (currentIndex + 1) % images.length;
           updateImage(newIndex);
-        }
+        };
 
-        function showPrevImage() {
+        const showPrevImage = () => {
           const newIndex = (currentIndex - 1 + images.length) % images.length;
           updateImage(newIndex);
-        }
+        };
 
-        nextArrow.addEventListener("click", showNextImage);
-        prevArrow.addEventListener("click", showPrevImage);
+        const startAutoSlide = () => {
+          autoSlideInterval = setInterval(showNextImage, 4000);
+        };
+
+        const resetAutoSlide = () => {
+          clearInterval(autoSlideInterval);
+          startAutoSlide();
+        };
+
+        nextArrow.addEventListener("click", () => {
+          showNextImage();
+          resetAutoSlide();
+        });
+
+        prevArrow.addEventListener("click", () => {
+          showPrevImage();
+          resetAutoSlide();
+        });
+
+        startAutoSlide();
 
         anime
           .timeline({ loop: false })

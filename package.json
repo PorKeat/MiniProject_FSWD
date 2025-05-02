@@ -2,10 +2,11 @@
   "dependencies": {
     "@tailwindcss/cli": "^4.1.4",
     "motion": "^12.9.2",
+    "sweetalert2": "^11.19.1",
     "tailwindcss": "^4.1.4"
   },
   "scripts": {
-    "start": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
+    "start": "tailwindcss -i ./src/input.css -o ./src/output.css --watch",
     "push-dev": "git pull origin dev && git add . && git commit -m \"dev\" && git push origin dev"
   }
 }

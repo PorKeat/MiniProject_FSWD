@@ -1,1 +1,6 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+@theme {
+  --font-mukta: 'Mukta', sans-serif;
+  --color-primary: #2a9d8f;
+}
