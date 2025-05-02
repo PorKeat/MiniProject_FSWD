@@ -2,3 +2,54 @@
 .cursiveFont {
   font-family: "Style Script", cursive;
 }
+
+.st0 {
+  fill: #2a9d8f;
+  stroke: black;
+  stroke-miterlimit: 10;
+}
+
+#KH-1:hover,
+#KH-2:hover,
+#KH-3:hover,
+#KH-4:hover,
+#KH-5:hover,
+#KH-6:hover,
+#KH-7:hover,
+#KH-8:hover,
+#KH-9:hover,
+#KH-10:hover,
+#KH-11:hover,
+#KH-12:hover,
+#KH-13:hover,
+#KH-14:hover,
+#KH-15:hover,
+#KH-16:hover,
+#KH-17:hover,
+#KH-18:hover,
+#KH-19:hover,
+#KH-20:hover,
+#KH-21:hover,
+#KH-22:hover,
+#KH-23:hover,
+#KH-24:hover,
+#KH-25:hover {
+  fill: white;
+  cursor: pointer;
+}
+/* @media (min-width: 768px) {
+  #nav-menu, .navbar-buttons {
+    display: flex !important;
+  }
+  #hamburger {
+    display: none !important;
+  }
+}
+@media (max-width: 767px) {
+  #nav-menu, .navbar-buttons {
+    display: none !important;
+  }
+  #hamburger {
+    display: block !important;
+  }
+} */
