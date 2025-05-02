@@ -102,6 +102,13 @@ export default function renderFooter() {
                     >Blog</a
                   >
                 </li>
+                <li>
+                  <a
+                    href="${getPageHref('articleDetails.html')}"
+                    class="hover:text-[#2A9D8F] transition-colors"
+                    >FAQ</a
+                  >
+                </li>
               </ul>
             </div>
 
