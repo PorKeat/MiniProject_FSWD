@@ -6140,16 +6140,20 @@
         </button>
       </section>
     </main>
-    <footer id="footer"></footer>
-    <script type="module" src="../js/script.js"></script>
+    <footer
+      id="footer"
+      class="bg-gray-900 text-white text-center py-4"
+    ></footer>
+
     <script type="text/javascript">
-      document.addEventListener('DOMContentLoaded', function () {
+      document.addEventListener("DOMContentLoaded", function () {
         window.setTimeout(
-          document.querySelector('svg').classList.add('animated'),
+          document.querySelector("svg").classList.add("animated"),
           1000
         );
       });
       AOS.init();
     </script>
+    <script type="module" src="../js/script.js"></script>
   </body>
 </html>
