@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="style/style.css" />
     <title>Document</title>
   </head>
-  <body class="overflow-x-hidden font-mukta">
+  <body class="flex flex-col min-h-screen overflow-x-hidden font-mukta">
     <header class="h-[870px]">
       <nav id="navbar"></nav>
       <section class="relative top-0 left-0 right-0 bottom-0 -z-10">
@@ -94,7 +94,7 @@
         </button>
       </article>
     </header>
-    <main class="h-[200vh]">
+    <main class="flex-grow h-[200vh]">
       <section class="text-center my-40 w-[90%] mx-auto">
         <p class="text-[30px] text-primary cursiveFont">Plan your trip</p>
         <h2 class="text-[40px] font-bold leading-12">
@@ -2525,9 +2525,7 @@
                         <h6 class="text-lg font-medium text-gray-700">
                           Andy Doe
                         </h6>
-                        <p class="text-sm text-gray-500">
-                          Manager
-                        </p>
+                        <p class="text-sm text-gray-500">Manager</p>
                       </div>
                     </div>
                     <p class="mt-8">
@@ -2575,23 +2573,27 @@
         </div>
       </section>
     </main>
+    <footer
+      id="footer"
+      class="bg-gray-900 text-white text-center py-4"
+    ></footer>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script>
-      window.addEventListener("load", () => {
+      window.addEventListener('load', () => {
         let currentIndex = 0;
-        const images = document.querySelectorAll("#backgroundSlider img");
+        const images = document.querySelectorAll('#backgroundSlider img');
 
-        const prevArrow = document.getElementById("prevArrow");
-        const nextArrow = document.getElementById("nextArrow");
+        const prevArrow = document.getElementById('prevArrow');
+        const nextArrow = document.getElementById('nextArrow');
         let autoSlideInterval;
 
         const updateImage = (newIndex) => {
-          images[currentIndex].classList.remove("opacity-100");
-          images[currentIndex].classList.add("opacity-0");
+          images[currentIndex].classList.remove('opacity-100');
+          images[currentIndex].classList.add('opacity-0');
           currentIndex = newIndex;
-          images[currentIndex].classList.remove("opacity-0");
-          images[currentIndex].classList.add("opacity-100");
+          images[currentIndex].classList.remove('opacity-0');
+          images[currentIndex].classList.add('opacity-100');
         };
 
         const showNextImage = () => {
@@ -2613,12 +2615,12 @@
           startAutoSlide();
         };
 
-        nextArrow.addEventListener("click", () => {
+        nextArrow.addEventListener('click', () => {
           showNextImage();
           resetAutoSlide();
         });
 
-        prevArrow.addEventListener("click", () => {
+        prevArrow.addEventListener('click', () => {
           showPrevImage();
           resetAutoSlide();
         });
@@ -2628,25 +2630,25 @@
         anime
           .timeline({ loop: false })
           .add({
-            targets: "#heroTitle",
+            targets: '#heroTitle',
             scale: [14, 1],
             opacity: [0, 1],
-            easing: "easeOutCirc",
+            easing: 'easeOutCirc',
             duration: 1200,
             delay: 0,
           })
           .add({
-            targets: "#heroButton",
+            targets: '#heroButton',
             opacity: [0, 1],
             translateY: [-50, 0],
-            easing: "easeOutCirc",
+            easing: 'easeOutCirc',
             duration: 350,
           })
           .add({
-            targets: "#heroText",
+            targets: '#heroText',
             opacity: [0, 1],
             translateY: [50, 0],
-            easing: "easeOutCirc",
+            easing: 'easeOutCirc',
             duration: 350,
             delay: 100,
           });

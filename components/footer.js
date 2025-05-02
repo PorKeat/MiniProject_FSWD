@@ -16,7 +16,7 @@ export default function renderFooter() {
   };
 
   const footerHTML = `
-      <footer class="w-full h-fit bg-[#141c2c] text-white">
+      <div class="w-full h-fit bg-[#141c2c] text-white">
         <div class="w-full mx-auto sm:px-10 px-4 pb-10">
           <div class="flex flex-col lg:flex-row gap-8 pt-12">
             <!-- Column 1 -->
@@ -39,7 +39,7 @@ export default function renderFooter() {
                   <span>sammytg66@gmail.com</span>
                 </li>
               </ul>
-  
+
               <!-- Socials -->
               <div class="flex gap-4 mt-6">
                 <a
@@ -62,7 +62,7 @@ export default function renderFooter() {
                 </a>
               </div>
             </div>
-  
+
             <!-- Column 2 -->
             <div class="mt-28 lg:flex-1 justify-center items-center text-center">
               <h2 class="text-3xl font-semibold mb-7">Links</h2>
@@ -104,7 +104,7 @@ export default function renderFooter() {
                 </li>
               </ul>
             </div>
-  
+
             <!-- Column 3 -->
             <div class="mt-28 lg:flex-1">
               <h2 class="text-3xl font-semibold mb-8">Latest News and Blogs</h2>
@@ -133,7 +133,7 @@ export default function renderFooter() {
                     </div>
                   </div>
                 </a>
-  
+
                 <a href="${getPageHref('blogDetail.html')}" class="group block">
                   <div class="flex gap-4">
                     <div
@@ -161,9 +161,9 @@ export default function renderFooter() {
               </div>
             </div>
           </div>
-  
+
           <hr class="border-gray-700 mt-14" />
-  
+
           <div
             class="flex flex-col sm:flex-row justify-center items-center py-4 gap-2 text-center"
           >
@@ -172,8 +172,14 @@ export default function renderFooter() {
             <span>Thank You</span>
           </div>
         </div>
-      </footer>
+      </div>
     `;
 
-  document.body.insertAdjacentHTML('beforeend', footerHTML);
+  // Inject the footer content into the <footer> tag with id="footer"
+  document.addEventListener('DOMContentLoaded', () => {
+    const footerElement = document.getElementById('footer');
+    if (footerElement) {
+      footerElement.innerHTML = footerHTML;
+    }
+  });
 }
