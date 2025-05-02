@@ -84,7 +84,7 @@ const Navbar = () => {
             </button>
             <a href="${getPageHref("login.html")}">
             <button
-            class="bg-[#2A9D8F] hover:bg-[#21867A] py-2 px-4 rounded-full transition duration-300 cursor-pointer"
+            class="bg-[#2A9D8F] hover:bg-[#21867A] py-2 px-4 rounded-full transition duration-300 cursor-pointer font-semibold"
             >
             Log In
           </button>

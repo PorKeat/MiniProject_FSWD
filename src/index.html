@@ -13,7 +13,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style/style.css" />
-    <title>Document</title>
+    <title>HomePage</title>
   </head>
   <body class="flex flex-col min-h-screen overflow-x-hidden font-mukta">
     <header class="h-[870px]">
@@ -67,17 +67,17 @@
 
       <article
         id="heroSection"
-        class="absolute top-[25rem] left-[50%] transform -translate-x-[50%] -translate-y-[50%] text-center w-[40%] sm:w-[60%] lg:w-[40%] p-8 rounded-2xl"
+        class="absolute top-[25rem] left-[50%] transform -translate-x-[50%] -translate-y-[50%] text-center w-[40%] sm:w-[60%] lg:w-[40%] rounded-2xl flex flex-col items-center justify-center"
       >
         <div>
           <p
-            class="text-amber-50 mt-4 text-lg sm:text-xl opacity-0"
+            class="text-amber-50 mt-4 text-lg sm:text-xl opacity-0 w-[70%] mx-auto"
             id="heroText"
           >
             This website is one of solution for all your needs.
           </p>
           <h1
-            class="inline-block text-4xl sm:text-5xl text-amber-50 font-extrabold leading-tight uppercase tracking-wider"
+            class="inline-block text-4xl sm:text-6xl text-amber-50 font-extrabold leading-tight uppercase tracking-wider my-[0.5rem]"
             id="heroTitle"
           >
             Welcome <br />
@@ -86,15 +86,17 @@
           </h1>
         </div>
 
-        <button
-          class="bg-[#2A9D8F] mt-6 hover:bg-[#21867A] text-white py-3 px-6 rounded-full shadow-md transition duration-300 transform hover:scale-105 opacity-0 -translate-y-[25%]"
-          id="heroButton"
-        >
-          Get Started
-        </button>
+        <a href="./pages/services.html">
+          <button
+            class="bg-[#2A9D8F] mt-6 hover:bg-[#21867A] text-white py-3 px-6 rounded-full shadow-md transition duration-300 transform hover:scale-105 opacity-0 -translate-y-[25%] cursor-pointer font-semibold"
+            id="heroButton"
+          >
+            Let's Tour
+          </button>
+        </a>
       </article>
     </header>
-    <main class="flex-grow h-[200vh]">
+    <main class="flex-grow">
       <section class="text-center my-40 w-[90%] mx-auto">
         <p class="text-[30px] text-primary cursiveFont">Plan your trip</p>
         <h2 class="text-[40px] font-bold leading-12">
@@ -102,10 +104,10 @@
           perfect Holiday
         </h2>
         <div
-          class="grid grid-cols-4 grid-rows-2 gap-4 mt-10 h-[550px] overflow-hidden"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 grid-rows-none lg:grid-rows-2 gap-4 mt-10"
         >
           <div
-            class="col-span-2 row-span-2 relative group overflow-hidden rounded-xl"
+            class="lg:col-span-2 lg:row-span-2 relative group overflow-hidden rounded-xl h-[300px] sm:h-[300px] lg:h-full"
           >
             <img
               src="../assets/image/beach.jpg"
@@ -123,7 +125,7 @@
             </div>
           </div>
           <div
-            class="col-span-1 row-span-1 relative group overflow-hidden rounded-xl"
+            class="relative group overflow-hidden rounded-xl sm:h-[300px] h-full"
           >
             <img
               src="../assets/image/mountian.jpg"
@@ -140,7 +142,7 @@
             </div>
           </div>
           <div
-            class="col-span-1 row-span-1 relative group overflow-hidden rounded-xl"
+            class="relative group overflow-hidden rounded-xl h-full sm:h-[300px]"
           >
             <img
               src="../assets/image/museum.jpg"
@@ -156,7 +158,9 @@
               </p>
             </div>
           </div>
-          <div class="col-span-2 relative group overflow-hidden rounded-xl">
+          <div
+            class="lg:col-span-2 relative group overflow-hidden rounded-xl h-[300px] sm:h-[300px] lg:h-full"
+          >
             <img
               src="../assets/image/temple.jpg"
               class="w-full h-full object-cover transform transition duration-500 group-hover:scale-105"
@@ -178,7 +182,9 @@
         <p class="text-[30px] text-primary cursiveFont">View on map</p>
         <h2 class="text-[40px] font-bold leading-12">Provinces of Cambodia</h2>
         <div>
-          <div class="w-[780px] h-[400px] mx-auto mt-10 relative">
+          <div
+            class="w-full max-w-[780px] h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] mx-auto mt-10 relative"
+          >
             <svg
               version="1.1"
               id="svg2"
@@ -2321,73 +2327,69 @@
           </div>
         </div>
       </section>
-      <section class="text-center mt-80 w-[90%] mx-auto">
-        <p class="text-[30px] text-primary cursiveFont">
+      <section class="text-center mt-90 w-[90%] mx-auto">
+        <p class="text-2xl md:text-3xl text-primary cursiveFont">
           Many places for your trip
         </p>
-        <h2 class="text-[40px] font-bold leading-12">Popular Provinces</h2>
-        <div class="flex mt-40">
-          <div class="w-[250px] mt-10 text-center ml-auto">
-            <img
-              src="../assets/image/shvProvince.jpg"
-              alt="Sihanouk"
-              class="rounded-full h-[250px] w-[250px] object-cover mx-auto mt-5"
-            />
-            <h4 class="font-semibold text-primary mt-4 text-[20px]">
-              <i class="fa-solid fa-location-dot text-primary mr-2"></i>Sihanouk
-              Ville
-            </h4>
-            <p class="w-[250px] mx-auto mt-2 text-gray-500">
-              Cambodia’s beaches offer paradise: peaceful, scenic, affordable,
-              and adventure-filled.
-            </p>
-          </div>
-          <div
-            class="w-[250px] mx-auto mt-10 text-center flex flex-col items-center relative top-[-250px]"
-          >
-            <lottie-player
-              src="../assets/lotties/Animation - 1746169348255.json"
-              background="transparent"
-              speed="1"
-              class="w-[150px] h-[150px] relative top-[50px]"
-              loop
-              autoplay
-            >
-            </lottie-player>
+        <h2 class="text-3xl md:text-4xl font-bold leading-tight">
+          Popular Provinces
+        </h2>
 
+        <div
+          class="flex flex-col lg:flex-row justify-center items-center gap-10 mt-20 relative"
+        >
+          <div class="w-full max-w-[250px] text-center order-1 lg:order-2">
             <img
               src="../assets/image/srProvince.jpg"
-              alt="Sihanouk"
-              class="rounded-full h-[250px] w-[250px] object-cover mx-auto mt-5"
+              alt="Siem Reap"
+              class="rounded-full w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] object-cover mx-auto mt-5"
             />
-            <h4 class="font-semibold text-primary mt-4 text-[20px]">
+            <h4 class="font-semibold text-primary mt-4 text-lg md:text-xl">
               <i class="fa-solid fa-location-dot text-primary mr-2"></i>Siem
               Reap
             </h4>
-            <p class="w-[250px] mx-auto mt-2 text-gray-500">
+            <p class="mt-2 text-gray-500 text-sm md:text-base">
               Siem Reap: temples, culture, Angkor Wat, night markets, history,
               tradition, adventure.
             </p>
           </div>
-          <div class="w-[250px] mt-10 text-center mr-auto">
+
+          <div class="w-full max-w-[250px] text-center order-2 lg:order-1">
+            <img
+              src="../assets/image/shvProvince.jpg"
+              alt="Sihanouk"
+              class="rounded-full w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] object-cover mx-auto mt-5"
+            />
+            <h4 class="font-semibold text-primary mt-4 text-lg md:text-xl">
+              <i class="fa-solid fa-location-dot text-primary mr-2"></i>Sihanouk
+              Ville
+            </h4>
+            <p class="mt-2 text-gray-500 text-sm md:text-base">
+              Cambodia’s beaches offer paradise: peaceful, scenic, affordable,
+              and adventure-filled.
+            </p>
+          </div>
+
+          <div class="w-full max-w-[250px] text-center order-3">
             <img
               src="../assets/image/kampotProvince.jpg"
-              alt="Sihanouk"
-              class="rounded-full h-[250px] w-[250px] object-cover mx-auto mt-5"
+              alt="Kampot"
+              class="rounded-full w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] object-cover mx-auto mt-5"
             />
-            <h4 class="font-semibold text-primary mt-4 text-[20px]">
+            <h4 class="font-semibold text-primary mt-4 text-lg md:text-xl">
               <i class="fa-solid fa-location-dot text-primary mr-2"></i>Kampot
             </h4>
-            <p class="w-[250px] mx-auto mt-2 text-gray-500">
+            <p class="mt-2 text-gray-500 text-sm md:text-base">
               Kampot: riverside charm, pepper farms, mountains, sunsets, caves,
               colonial beauty.
             </p>
           </div>
         </div>
       </section>
+
       <section>
         <div>
-          <div class="w-[90%] mx-auto mt-10 text-center">
+          <div class="w-[90%] mx-auto mt-40 text-center">
             <p class="text-[30px] text-primary cursiveFont">
               from our happy customers
             </p>
@@ -2560,10 +2562,10 @@
                     <p class="mt-8">
                       Explore the world with ease through our all-in-one tourism
                       service. From booking your dream getaway to discovering
-                      hidden gems, we provide everything you need for a seamless
-                      travel experience. Enjoy personalized recommendations,
-                      exclusive offers, and expert advice, all designed to make
-                      your trip unforgettable.
+                      hidden gems, we provide everything you need for a
+                      seamlessf travel experience. Enjoy personalized
+                      recommendations, exclusive offers, and expert advice, all
+                      designed to make your trip unforgettable.
                     </p>
                   </div>
                 </div>
@@ -2575,25 +2577,25 @@
     </main>
     <footer
       id="footer"
-      class="bg-gray-900 text-white text-center py-4"
+      class="bg-gray-900 text-white text-center py-4 mt-30"
     ></footer>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script>
-      window.addEventListener('load', () => {
+      window.addEventListener("load", () => {
         let currentIndex = 0;
-        const images = document.querySelectorAll('#backgroundSlider img');
+        const images = document.querySelectorAll("#backgroundSlider img");
 
-        const prevArrow = document.getElementById('prevArrow');
-        const nextArrow = document.getElementById('nextArrow');
+        const prevArrow = document.getElementById("prevArrow");
+        const nextArrow = document.getElementById("nextArrow");
         let autoSlideInterval;
 
         const updateImage = (newIndex) => {
-          images[currentIndex].classList.remove('opacity-100');
-          images[currentIndex].classList.add('opacity-0');
+          images[currentIndex].classList.remove("opacity-100");
+          images[currentIndex].classList.add("opacity-0");
           currentIndex = newIndex;
-          images[currentIndex].classList.remove('opacity-0');
-          images[currentIndex].classList.add('opacity-100');
+          images[currentIndex].classList.remove("opacity-0");
+          images[currentIndex].classList.add("opacity-100");
         };
 
         const showNextImage = () => {
@@ -2615,12 +2617,12 @@
           startAutoSlide();
         };
 
-        nextArrow.addEventListener('click', () => {
+        nextArrow.addEventListener("click", () => {
           showNextImage();
           resetAutoSlide();
         });
 
-        prevArrow.addEventListener('click', () => {
+        prevArrow.addEventListener("click", () => {
           showPrevImage();
           resetAutoSlide();
         });
@@ -2630,25 +2632,25 @@
         anime
           .timeline({ loop: false })
           .add({
-            targets: '#heroTitle',
+            targets: "#heroTitle",
             scale: [14, 1],
             opacity: [0, 1],
-            easing: 'easeOutCirc',
+            easing: "easeOutCirc",
             duration: 1200,
             delay: 0,
           })
           .add({
-            targets: '#heroButton',
+            targets: "#heroButton",
             opacity: [0, 1],
             translateY: [-50, 0],
-            easing: 'easeOutCirc',
+            easing: "easeOutCirc",
             duration: 350,
           })
           .add({
-            targets: '#heroText',
+            targets: "#heroText",
             opacity: [0, 1],
             translateY: [50, 0],
-            easing: 'easeOutCirc',
+            easing: "easeOutCirc",
             duration: 350,
             delay: 100,
           });
