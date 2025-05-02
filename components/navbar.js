@@ -18,7 +18,7 @@ const Navbar = () => {
   return `
         <section
           id="nav"
-          class="flex items-center justify-between py-4 px-6 w-[75%] mx-auto text-amber-50 fixed left-0 right-0 z-[100] rounded-full transition-all duration-300 top-5 ease-in-out"
+          class="flex items-center justify-between py-4 px-6 w-[75%] mx-auto text-[#f5f5f5] fixed left-0 right-0 z-[100] rounded-full transition-all duration-300 top-5 ease-in-out"
         >
           <div>
           <a href="${getPageHref(
