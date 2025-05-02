@@ -37,3 +37,19 @@
   fill: white;
   cursor: pointer;
 }
+/* @media (min-width: 768px) {
+  #nav-menu, .navbar-buttons {
+    display: flex !important;
+  }
+  #hamburger {
+    display: none !important;
+  }
+}
+@media (max-width: 767px) {
+  #nav-menu, .navbar-buttons {
+    display: none !important;
+  }
+  #hamburger {
+    display: block !important;
+  }
+} */

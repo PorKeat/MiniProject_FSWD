@@ -4,9 +4,6 @@
   --font-mukta: "Mukta", sans-serif;
   --color-primary: #2a9d8f;
 }
-* {
-  @apply text-base sm:text-sm md:text-sm lg:text-base xl:text-base;
-}
 html {
   @apply font-mukta;
 }
